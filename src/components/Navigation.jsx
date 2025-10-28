@@ -1,4 +1,5 @@
 import { ChevronDown } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const productCategories = [
@@ -25,52 +26,50 @@ export default function Navigation() {
   const [showDropdown, setShowDropdown] = useState(false);
 
   return (
-    <nav className="bg-[#e85d2a] text-white relative">
+    <nav className=" text-white relative">
       <div className="max-w-7xl mx-auto flex items-center justify-center">
-        <a
-          href="/"
-          className="px-8 py-4 hover:bg-[#d84d1a] transition-colors text-center flex-1 font-semibold"
+        <Link
+          to="/"
+          className="bg-gradient-to-b from-orange-500 to-red-600 hover:from-[#FFDF3A] hover:to-[#FFB103] py-3 border-b border-r border-white text-center flex-1 font-semibold text-white transition-all duration-300"
         >
           Home
-        </a>
-        <a
-          href="/about"
-          className="px-8 py-4 hover:bg-[#d84d1a] transition-colors text-center flex-1 font-semibold"
+        </Link>
+
+        <Link
+          to="/about"
+          className="bg-gradient-to-b from-orange-500 to-red-600 hover:from-[#FFDF3A] hover:to-[#FFB103]  py-3 border-b border-r border-white  transition-colors text-center flex-1 font-semibold"
         >
           About Us
-        </a>
+        </Link>
         <div
-          className="relative flex-1"
+          className="relative flex-1 bg-gradient-to-b from-orange-500 to-red-600 hover:from-[#FFDF3A] hover:to-[#FFB103]   border-b border-r py-3 border-white flex  items-center justify-center"
           onMouseEnter={() => setShowDropdown(true)}
           onMouseLeave={() => setShowDropdown(false)}
         >
-          <button className="w-full px-8 py-4 hover:bg-[#d84d1a] transition-colors text-center font-semibold flex items-center justify-center gap-2 bg-[#f5c842] text-black">
+          <button className="transition-colors text-center flex-1 font-semibold">
             Our Product Range
-            <ChevronDown className="w-4 h-4" />
           </button>
 
           {showDropdown && (
             <div className="absolute top-full left-0 right-0 bg-[#e85d2a] shadow-lg z-50 max-h-[400px] overflow-y-auto">
               {productCategories.map((category) => (
-                <a
+                <Link
                   key={category}
-                  href={`/product/${category
-                    .toLowerCase()
-                    .replace(/\s+/g, "-")}`}
-                  className="block px-6 py-3 hover:bg-[#d84d1a] transition-colors border-b border-[#d84d1a] text-left"
+                  to={`/product/${category.toLowerCase().replace(/\s+/g, "-")}`}
+                  className="block px-6 py-3 hover:bg-[#f5c842] transition-colors border-b border-[#f5c842] text-left"
                 >
                   {category}
-                </a>
+                </Link>
               ))}
             </div>
           )}
         </div>
-        <a
-          href="/contact"
-          className="px-8 py-4 hover:bg-[#d84d1a] transition-colors text-center flex-1 font-semibold"
+        <Link
+          to="/contact"
+          className=" py-3 border-b border-r border-white  bg-gradient-to-b from-orange-500 to-red-600 hover:from-[#FFDF3A] hover:to-[#FFB103] transition-colors text-center flex-1 font-semibold"
         >
           Contact Us
-        </a>
+        </Link>
       </div>
     </nav>
   );

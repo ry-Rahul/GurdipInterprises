@@ -114,9 +114,6 @@ export default function ProductCarousel() {
 
   return (
     <div className="bg-gradient-to-b from-[#3d2f2a] to-[#2a1f1a] py-16 relative overflow-hidden min-h-screen flex items-center">
-      {/* Orange accent bar at top */}
-      <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-orange-500 via-orange-600 to-orange-500"></div>
-
       <div className="max-w-7xl mx-auto px-4 w-full">
         {/* Carousel Container */}
         <div
