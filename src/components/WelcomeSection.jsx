@@ -41,7 +41,7 @@ export default function WelcomeSection() {
     <section className="bg-[#3d2f2a] py-12">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-[#f5c842] text-2xl font-bold mb-8">
-          Welcome to JIA ENTERPRISE
+          Welcome to Gurdip Enterprise
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
@@ -75,7 +75,7 @@ export default function WelcomeSection() {
           <p>
             Established as a <span className="font-semibold">Proprietor</span>{" "}
             firm in the year <span className="font-semibold">2011</span>, we{" "}
-            <span className="font-semibold">"JIA ENTERPRISE"</span> are a
+            <span className="font-semibold">"Gurdip Enterprise"</span> are a
             leading <span className="font-semibold">Manufacturer</span> of a
             wide range of{" "}
             <span className="font-semibold">

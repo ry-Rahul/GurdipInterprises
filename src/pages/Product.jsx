@@ -186,7 +186,7 @@ export default function Product() {
                 <p className="text-sm text-gray-700 leading-relaxed">
                   Established as a <span className="font-bold">Proprietor</span>{" "}
                   firm in the year <span className="font-bold">2011</span>, we{" "}
-                  <span className="font-bold">"JIA ENTERPRISE"</span> are a
+                  <span className="font-bold">Gurdip Enterprise</span> are a
                   leading <span className="font-bold">Manufacturer</span> of a
                   wide range of{" "}
                   <span className="font-bold">

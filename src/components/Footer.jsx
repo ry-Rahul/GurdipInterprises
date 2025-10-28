@@ -27,7 +27,7 @@ export default function Footer() {
         <div className="flex justify-between items-center">
           <div className="text-sm text-gray-400">
             <p className="mb-1">
-              © <span className="font-bold">JIA ENTERPRISE</span>. All Rights
+              © <span className="font-bold">Gurdip Enterprise</span>. All Rights
               Reserved (Terms of Use)
             </p>
             <p>Developed and Managed by IndiaMART InterMESH Limited</p>

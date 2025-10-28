@@ -18,8 +18,8 @@ export default function ContactSection() {
             {/* Left side: CEO and address details */}
             <div className="text-white space-y-4">
               <div>
-                <p className="font-bold text-lg">Dipak Solanki (CEO)</p>
-                <p className="text-gray-300">JIA ENTERPRISE</p>
+                <p className="font-bold text-lg">Gurdip Yadav (CEO)</p>
+                <p className="text-gray-300">Gurdip Enterprise</p>
               </div>
 
               {/* Company address */}

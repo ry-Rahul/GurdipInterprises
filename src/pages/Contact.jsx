@@ -65,7 +65,7 @@ export default function ContactPage() {
                         Get Direction
                       </button>
                     </div>
-                    <p className="font-bold">JIA ENTERPRISE</p>
+                    <p className="font-bold">Gurdip Enterprise</p>
                     <p className="text-gray-700 leading-relaxed">
                       Ground Floor, Block No-E, Shop No-4,
                       <br />

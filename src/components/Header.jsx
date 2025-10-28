@@ -24,7 +24,9 @@ export default function Header() {
 
           {/* Company Name + Address + GST */}
           <div>
-            <h1 className="text-2xl font-bold tracking-wide">JIA ENTERPRISE</h1>
+            <h1 className="text-2xl font-bold tracking-wide">
+              Gurdip Enterprise
+            </h1>
             <div className="flex items-center gap-4 text-xs text-gray-300 mt-1">
               {/* Address */}
               <span className="flex items-center gap-1">
