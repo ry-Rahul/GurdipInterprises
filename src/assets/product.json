@@ -1,0 +1,213 @@
+{
+  "products": [
+    {
+      "category": "Programming Cables",
+        "description":"Our product range includes a wide range of siemens programming cable, usb sc09 fx mitsubishi plc programming cable, siemens logo plc programming cable, usb 1761 cbl pm02 plc programming cable, usb qc30r2 programming cable and usbacab230 programming cable.",
+      "items": [
+        {
+          "name": "Siemens Programming Cable",
+          "price": "Rs 2,450",
+          "details": {
+            "minimumOrderQuantity": 1,
+            "cableType": "USB",
+            "color": "Black",
+            "material": "Copper",
+            "usageApplication": "PLC",
+            "packagingType": "Box",
+            "countryOfOrigin": "Made in India",
+             "image":[
+                "../images/SiemensProgrammingCable1.jpeg",
+                "../images/SiemensProgrammingCable2.jpeg"
+             ],
+            "description": "With sincerity and hard work of our professionals, we have carved a niche for ourselves in this domain by providing a premium quality of Programming Cable."
+          }
+        },
+        {
+          "name": "Usb Sc09 Fx Mitsubishi Plc Programming Cable",
+          "price": "Rs 1,650",
+          "details": {
+              "color": "Black",
+              "material": "PVC",
+            "cableType": "USB",
+            "usageApplication": "PROGRAMMING",
+            "length": "2 M",
+            "inputType":"Display Port Male",
+            "packagingType": "Box",
+            "countryOfOrigin": "Made in India",
+             "image":[
+               "../images/usb-sc09-fx-mitsubishi-plc-programming-cable-1.jpg",
+               "../images/usb-sc09-fx-mitsubishi-plc-programming-cable-3.webp",
+                "../images/usb-sc09-fx-mitsubishi-plc-programming-cable-2.webp"
+
+             ],
+            "description": "WE ARE TRADERS IN SIEMENS PLC  PROGRAMMING CABLE , SIEMENS PLC AND ANALOGE MODULE , EXPANSION MODULE INPUT MODULE OUTPUT MODULE AND OTHER ACCESSORIES IN PAN INDIA LOCATION"
+          }
+        },
+        {
+          "name": "Siemens Logo Plc Programming Cable",
+          "price": "Rs 1,650",
+          "details": {
+            "color": "Black",
+            "material": "PVC",
+            "cableType": "USB",
+            "usageApplication": "PROGRAMMING",
+            "length": "2 M",
+            "inputType":"Display Port Male",
+            "countryOfOrigin": "Made in India",
+             "image":[
+               "../images/siemens-logo-plc-programming-cable-1.webp",
+               "../images/siemens-logo-plc-programming-cable-2.webp",
+                "../images/siemens-logo-plc-programming-cable-3.webp"
+
+             ],
+            "description": "WE ARE TRADERS IN SIEMENS PLC  PROGRAMMING CABLE , SIEMENS PLC AND ANALOGE MODULE , EXPANSION MODULE INPUT MODULE OUTPUT MODULE AND OTHER ACCESSORIES IN PAN INDIA LOCATION"
+          }
+        },
+        {
+          "name": "Usb 1761 Cbl Pm02 Plc Programming Cable",
+          "price": "Rs 1,650",
+          "details": {
+            "color": "Black",
+            "material": "PVC",
+            "cableType": "USB",
+            "usageApplication": "PROGRAMMING",
+            "length": "2 M",
+            "inputType":"Display Port Male",
+            "modelNameNumber":"Usb 1761 Cbl Pm02",
+            "countryOfOrigin": "Made in India",
+             "image":[
+               "../images/usb-1761-cbl-pm02-plc-programming-cable-1.webp",
+               "../images/usb-1761-cbl-pm02-plc-programming-cable-2.webp",
+                "../images/usb-1761-cbl-pm02-plc-programming-cable-3.webp"
+
+             ],
+            "description": "WE ARE TRADERS IN SIEMENS PLC  PROGRAMMING CABLE , SIEMENS PLC AND ANALOGE MODULE , EXPANSION MODULE INPUT MODULE OUTPUT MODULE AND OTHER ACCESSORIES IN PAN INDIA LOCATION"
+          }
+        }
+      ]
+    },
+    {
+      "category": "Siemens Plc",
+      "items": [
+        {
+            "name": "Siemens 6es7972 0cb20 0xa0"
+        },
+        {
+            "name":"USB- FX 232 CAB1 PROGRAMMING CABLE"
+        }
+        {
+            "name":"Siemens Logo Programming Cable"
+        },
+        {
+            "name":"7mh4930 0aa01 SIEMENSE PLC"
+        }
+      ]
+    },
+    {
+      "category": "Input Module",
+      "items": [
+        {
+            "name":"B&R X20-AI-1744-3 Analog Input Module"
+        },
+        {
+            "name":"X20 Ai 1744"
+        },
+        {
+            "name":"B&R X20 DI 2377"
+        },
+        {
+            "name":"X20AIA744 Load Cell Module"
+        }
+      ]
+    },
+    {
+      "category": "Siemens Modules",
+      "items": [
+        {
+            "name":"Siemens PLC S7 300"
+        },
+        {
+            "name":"Siemens S7 200 Cn Plc Cable"
+        },
+        {
+            "name":"Plc Expansion Module 6es7 223 1bl22 0xb0"
+        },
+        {
+            "name":"6gk1571 0ba00 0aa0 Siemens"
+        }
+      ]
+    },
+    {
+      "category": "Programmable Logic Controller",
+      "description":"Offering you a complete choice of products which include programming cable usb-ac30r2-9ss, usb-ac30r2-9ss mitsubishi plc cable, mitsubishi plc programing cable, usb-acab230 - delta plc cable, fx-usb-aw for mitsubishi fx1n/2n/fx3uc/fx3g series and delta hmi & plc usb programming cable uc-prg020 12a plc programming cable.",
+      "items": [
+        {
+            "name":"Programming cable USB-AC30R2-9SS"
+        },
+        {
+            "name":"USB-AC30R2-9SS Mitsubishi PLC Cable"
+        },
+        {
+            "name":"Mitsubishi Plc Programing Cable"
+        },
+        {
+            "name":"USB-ACAB230 - DELTA PLC Cable"
+        }
+      ]
+    },
+    {
+      "category": "Rectifier",
+      "description":"Leading Manufacturer of bge 1.5 sew eurodrive rectifier, sew brake rectifier, 400 v brake rectifier, sew eurodrive bge 1.5 rectifier 825 385 4 for rectifying, capacity: 150-500vac, solid state brake rectifier and 500 v brake rectifier from Ahmedabad.",
+      "items": [
+         {
+            "name":"Bge 1.5 Sew Eurodrive Rectifier"
+         },
+         {
+            "name":"Sew Brake Rectifier"
+         },
+         {
+            "name":"400 V Brake Rectifier"
+         },
+         {
+            "name":"Sew Eurodrive Bge 1.5 Rectifier 825 385 4 For Rectifying, Capacity: 150-500VAC"
+         }
+      ]
+    },
+    {
+      "category": "Batching Plant Spare Parts",
+      "description":"Our product range includes a wide range of concrete end hose, pumping cylinder for schwing and putz and aquarius pump, batching plant memron keypad, batching plant hanger bearing, concrete pump pipe clamp and cement feeding blower.",
+      "items": [
+         {
+            "name":"Concrete End Hose"
+         },
+         {
+            "name":"Pumping Cylinder For Schwing And Putz And Aquarius Pump"
+         },
+         {
+            "name":"Batching Plant Memron Keypad"
+         },
+         {
+            "name":"Batching Plant Hanger Bearing"
+         }
+      ]
+    },
+    {
+      "category": "Concrete Batching Plant",
+      "description":"Prominent & Leading Manufacturer from Ahmedabad, we offer batching plant spare parts, concrete batching plant spares, batching plant sensor and concrete batching plant.",
+      "items": [
+         {
+            "name":"Batching Plant Spare Parts"
+         },
+         {
+            "name":"Concrete Batching Plant Spares"
+         },
+         {
+            "name":"Batching Plant Sensor"
+         },
+         {
+            "name":"Concrete Batching Plant"
+         }
+      ]
+    }
+  ]
+}
