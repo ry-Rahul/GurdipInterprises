@@ -7,7 +7,6 @@ import ProductCarousel from "../components/ProductCarousel";
 import ProductVideos from "../components/ProductVideos";
 import ProductsServices from "../components/ProductsServices";
 import RatingsReviews from "../components/RatingsReviews";
-import React from "react";
 import ShowcaseGallery from "../components/ShowcaseGallery";
 import WelcomeSection from "../components/WelcomeSection";
 

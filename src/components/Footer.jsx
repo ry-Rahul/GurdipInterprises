@@ -1,27 +1,29 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
   return (
     <footer className="bg-black text-white py-8">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-center gap-8 mb-6 text-sm">
-          <a href="/" className="hover:text-[#e85d2a]">
+          <Link href="/" className="hover:text-[#e85d2a]">
             Home
-          </a>
+          </Link>
           <span>|</span>
-          <a href="/about" className="hover:text-[#e85d2a]">
+          <Link to="/about" className="hover:text-[#e85d2a]">
             About Us
-          </a>
+          </Link>
           <span>|</span>
-          <a href="/products" className="hover:text-[#e85d2a]">
+          <Link to="/products" className="hover:text-[#e85d2a]">
             Our Product Range
-          </a>
+          </Link>
           <span>|</span>
-          <a href="/sitemap" className="hover:text-[#e85d2a]">
+          <Link to="/sitemap" className="hover:text-[#e85d2a]">
             Site Map
-          </a>
+          </Link> 
           <span>|</span>
-          <a href="/contact" className="hover:text-[#e85d2a]">
+          <Link to="/contact" className="hover:text-[#e85d2a]">
             Contact Us
-          </a>
+          </Link>
         </div>
 
         <div className="flex justify-between items-center">

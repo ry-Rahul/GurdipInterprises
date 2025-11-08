@@ -88,13 +88,14 @@
     },
     {
       "category": "Siemens Plc",
+      "description":"Providing you the best range of siemens 6es7972 0cb20 0xa0, usb- fx 232 cab1 programming cable, siemens logo programming cable, 7mh4930 0aa01 siemense plc and siwarex module s7 200 with effective & timely delivery.",
       "items": [
         {
             "name": "Siemens 6es7972 0cb20 0xa0"
         },
         {
             "name":"USB- FX 232 CAB1 PROGRAMMING CABLE"
-        }
+        },
         {
             "name":"Siemens Logo Programming Cable"
         },
@@ -105,6 +106,7 @@
     },
     {
       "category": "Input Module",
+      "description":"Manufacturer of a wide range of products which include b&r x20-ai-1744-3 analog input module, x20 ai 1744, b&r x20 di 2377, x20aia744 load cell module and b & r x20do9322 base module.",
       "items": [
         {
             "name":"B&R X20-AI-1744-3 Analog Input Module"
@@ -206,6 +208,219 @@
          },
          {
             "name":"Concrete Batching Plant"
+         }
+      ]
+    },
+    {
+      "category": "Weintek Hmi",
+      "description":"Leading Manufacturer of hmi touch panel, weintek mt8071ip hmi, mt8071ie weintek hmi, weintek mt8071ie hmi and mt8071ip hmi from Ahmedabad.",
+      "items": [
+         {
+            "name":"HMI Touch Panel"
+         },
+         {
+            "name":"Weintek Mt8071Ip Hmi"
+         },
+         {
+            "name":"Mt8071Ie Weintek Hmi"
+         },
+         {
+            "name":"Weintek Mt8071Ie Hmi"
+         }
+      ]
+    },
+    {
+      "category": "Cement Silo",
+      "description":"Our product range includes a wide range of cement silo dust collector filter, cement silo filters, cement storage silo, cement bulker unloading system and cement feeding air blowers.",
+      "items": [
+         {
+            "name":"Cement Silo Dust Collector Filter"
+         },
+         {
+            "name":"Cement Silo Filters"
+         },
+         {
+            "name":"Cement Storage Silo"
+         },
+         {
+            "name":"Cement Bulker Unloading System"
+         }
+      ]
+    },
+    {
+      "category": "Siemens",
+      "description":"We are a leading Manufacturer of 6es7 9720ca230xa0 siemens plc programming cable, industrial siemens plc and 6gk1571 0ba00 0aa0 siemens from Ahmedabad, India.",
+      "items": [
+         {
+            "name":"6Es7 9720Ca230Xa0 Siemens Plc Programming Cable"
+         },
+         {
+            "name":"Industrial Siemens PLC"
+         },
+         {
+            "name":"6gk1571 0ba00 0aa0 Siemens"
+         },
+         {
+            "name":"Concrete Batching Plant"
+         }
+      ]
+    },
+    {
+      "category": "HMI Touch Panel",
+      "description":"Providing you the best range of b&r 4ppc70.0702-20b hmi, maxmech hmi . and esa 7 inch sc107a0111 with effective & timely delivery.",
+      "items": [
+         {
+            "name":"B&R 4PPC70.0702-20B HMI"
+         },
+         {
+            "name":"Maxmech HMI ."
+         },
+         {
+            "name":"ESA 7 Inch SC107A0111"
+         }
+      ]
+    },
+    {
+      "category": "Delta Ac Servo Drive",
+      "description":"Prominent & Leading Manufacturer from Ahmedabad, we offer delta asda-b2/a2 ab servo driver programming cable and asda-b2 ab for delta servo motor driver programming.",
+      "items": [
+         {
+            "name":"Delta Asda-B2/A2 Ab Servo Driver Programming Cable"
+         },
+         {
+            "name":"Asda-B2 Ab For Delta Servo Motor Driver Programming"
+         }
+      ]
+    },
+    {
+      "category": "Mitsubishi Plc",
+      "description":"Prominent & Leading Manufacturer from Ahmedabad, we offer delta hmi & plc usb programming cable uc-prg020 12a programming cable and usb-sc09-fx fx-usb-aw for mitsubishi fx fx1s fx1n.",
+      "items": [
+         {
+            "name":"Delta HMI & PLC USB Programming Cable UC-PRG020 12A Programming Cable"
+         },
+         {
+            "name":"USB-SC09-FX FX-USB-AW for Mitsubishi FX FX1S FX1N"
+         }
+      ]
+    },
+    {
+      "category": "Cement Feeding System",
+      "description":"Pioneers in the industry, we offer ss cement feeding machine and cement feeding machine from India.",
+      "items": [
+         {
+            "name":"SS Cement Feeding Machine"
+         },
+         {
+            "name":"Cement Feeding Machine"
+         }
+      ]
+    },
+    {
+      "category": "Face Recognition System",
+      "description":"Offering you a complete choice of products which include proface ca3 usbsb 01.",
+      "items": [
+         {
+            "name":"Proface Ca3 Usbsb 01"
+         }
+      ]
+    },
+    {
+      "category": "Batching Plant Spares",
+      "description":"Prominent & Leading Manufacturer from Ahmedabad, we offer cement silo dust collector and construction machinery spare parts.",
+      "items": [
+         {
+            "name":"Cement Silo Dust Collector"
+         }
+      ]
+    },
+    {
+      "category": "Ferrule Fittings",
+      "description":"Pioneers in the industry, we offer usb-ac30r2-9ss from India.",
+      "items": [
+         {
+            "name":"USB-AC30R2-9SS"
+         }
+      ]
+    },
+    {
+      "category": "Fuji Hmi",
+      "description":"Leading Manufacturer of fuji hmi ts 1070 from Ahmedabad.",
+      "items": [
+         {
+            "name":"Fuji Hmi Ts 1070"
+         }
+      ]
+    },
+    {
+      "category": "Data Cable",
+      "description":"Leading Manufacturer of ca3 usb cb01 from Ahmedabad.",
+      "items": [
+         {
+            "name":"Ca3 Usb Cb01"
+         }
+      ]
+    },
+    {
+      "category": "Digital Weighing Indicator",
+      "description":"Manufacturer of a wide range of products which include weighing indicator (omron make).",
+      "items": [
+         {
+            "name":"Weighing Indicator (Omron Make)"
+         }
+      ]
+    },
+    {
+      "category": "Skin Care Medicines",
+      "description":"Offering you a complete choice of products which include 6ed1057-1aa01-0ba0.",
+      "items": [
+         {
+            "name":"6ED1057-1AA01-0BA0"
+         }
+      ]
+    },
+    {
+      "category": "Fiber Optic Cable",
+      "description":"We are a leading Manufacturer of qc32r2 cable from Ahmedabad, India.",
+      "items": [
+         {
+            "name":"QC32R2 Cable"
+         }
+      ]
+    },
+    {
+      "category": "Concrete Pump",
+      "description":"Prominent & Leading Manufacturer from Ahmedabad, we offer concrete pump pipe line.",
+      "items": [
+         {
+            "name":"Concrete Pump Pipe Line"
+         }
+      ]
+    },
+    {
+      "category": "Load Cell",
+      "description":"Prominent & Leading Manufacturer from Ahmedabad, we offer load cell 22.5kg, 45 kg, 90 kg.",
+      "items": [
+         {
+            "name":"Load Cell 22.5kg, 45 Kg, 90 Kg"
+         }
+      ]
+    },
+    {
+      "category": "Beam Load Cell",
+      "description":"We are a leading Manufacturer of beam load cell from Ahmedabad, India.",
+      "items": [
+         {
+            "name":"Beam Load Cell"
+         }
+      ]
+    },
+    {
+      "category": "Ifm Sensor",
+      "description":"Prominent & Leading Manufacturer from Ahmedabad, we offer ifm ib5124 sensor.",
+      "items": [
+         {
+            "name":"Ifm Ib5124 Sensor"
          }
       ]
     }
