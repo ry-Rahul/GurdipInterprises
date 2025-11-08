@@ -52,7 +52,7 @@ export default function Header() {
     });
 
     setFilteredResults(matches);
-    setShowDropdown(matches.length > 0);
+    setShowDropdown(true);
   };
 
   // 🧭 Handle item click → redirect
@@ -160,9 +160,7 @@ export default function Header() {
                   placeholder="Search Products/Services"
                   value={searchQuery}
                   onChange={handleSearch}
-                  onFocus={() =>
-                    filteredResults.length && setShowDropdown(true)
-                  }
+                  onFocus={() => setShowDropdown(true)}
                   className="border-0 focus:outline-none text-black px-4 py-2 w-64"
                 />
                 <button className="bg-[#4a4a4a] hover:bg-[#3a3a3a] text-white px-2 py-2 rounded-none">
@@ -170,21 +168,27 @@ export default function Header() {
                 </button>
               </div>
 
-              {/* 🔽 Search Dropdown (UI unchanged) */}
-              {showDropdown && filteredResults.length > 0 && (
+              {/* 🔽 Search Dropdown */}
+              {showDropdown && (
                 <ul className="absolute left-0 w-full bg-white text-black mt-1 rounded-md shadow-lg border border-gray-200 max-h-60 overflow-auto z-50">
-                  {filteredResults.map((item, idx) => (
-                    <li
-                      key={idx}
-                      onClick={() => handleSelect(item)}
-                      className="px-3 py-2 text-sm hover:bg-[#f5c842] hover:text-black cursor-pointer border-b border-gray-100 last:border-0"
-                    >
-                      <div className="font-semibold">{item.name}</div>
-                      <div className="text-xs text-gray-500">
-                        {item.category}
-                      </div>
+                  {filteredResults.length > 0 ? (
+                    filteredResults.map((item, idx) => (
+                      <li
+                        key={idx}
+                        onClick={() => handleSelect(item)}
+                        className="px-3 py-2 text-sm hover:bg-[#f5c842] hover:text-black cursor-pointer border-b border-gray-100 last:border-0"
+                      >
+                        <div className="font-semibold">{item.name}</div>
+                        <div className="text-xs text-gray-500">
+                          {item.category}
+                        </div>
+                      </li>
+                    ))
+                  ) : (
+                    <li className="px-3 py-2 text-center text-gray-500 text-sm">
+                      No Data Found
                     </li>
-                  ))}
+                  )}
                 </ul>
               )}
             </div>
