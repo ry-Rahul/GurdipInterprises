@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="bg-black text-white py-8">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-center gap-8 mb-6 text-sm">
-          <Link href="/" className="hover:text-[#e85d2a]">
+          <Link to="/" className="hover:text-[#e85d2a]">
             Home
           </Link>
           <span>|</span>
@@ -19,7 +19,7 @@ export default function Footer() {
           <span>|</span>
           <Link to="/sitemap" className="hover:text-[#e85d2a]">
             Site Map
-          </Link> 
+          </Link>
           <span>|</span>
           <Link to="/contact" className="hover:text-[#e85d2a]">
             Contact Us
