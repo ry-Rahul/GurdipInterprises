@@ -1,52 +1,50 @@
-"use client";
-
-import { MapPin, MessageSquare, Phone } from "lucide-react";
+import { Button, Card, Col, Form, Input, Row, Typography, message } from "antd";
+import {
+  EnvironmentOutlined,
+  MessageOutlined,
+  PhoneOutlined,
+  UserOutlined,
+} from "@ant-design/icons";
+import React, { useState } from "react";
 
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Navigation from "../components/Navigation";
+import QuickContactModal from "../components/modal/QuickContactModal";
 import emailjs from "@emailjs/browser";
-import { useState } from "react";
+
+const { Title, Text } = Typography;
 
 export default function ContactPage() {
-  // form states
-  const [requirement, setRequirement] = useState("");
-  const [mobile, setMobile] = useState("");
-  const [name, setName] = useState("");
+  const [form] = Form.useForm();
   const [loading, setLoading] = useState(false);
+  const [showMap, setShowMap] = useState(false); // ✅ map toggle state
+  const [isModalOpen, setIsModalOpen] = useState(false); // ✅ modal toggle state
 
-  const handleSubmit = async () => {
-    if (!mobile.trim() || !name.trim() || !requirement.trim()) {
-      alert("⚠️ Please fill all fields before submitting.");
+  const handleSubmit = async (values) => {
+    const { name, mobile, requirement } = values;
+
+    if (!mobile || !name || !requirement) {
+      message.warning("⚠️ Please fill all fields before submitting.");
       return;
     }
 
     setLoading(true);
-
     try {
-      // Initialize EmailJS (if not globally initialized)
-      emailjs.init("JUowiqP2W8P156o5Z"); // Replace with your EmailJS Public Key
+      emailjs.init("JUowiqP2W8P156o5Z");
 
-      await emailjs.send(
-        "service_0ypd3or", // Your Service ID
-        "template_1zf326r", // Your Template ID
-        {
-          to_name: "DS Aqua Engineering",
-          from_name: name,
-          from_number: mobile,
-          message: `📩 New Contact Inquiry from Website:\n\n👤 Name: ${name}\n📱 Mobile: ${mobile}\n📝 Requirement:\n${requirement}`,
-        }
-      );
+      await emailjs.send("service_0ypd3or", "template_1zf326r", {
+        to_name: "DS Aqua Engineering",
+        from_name: name,
+        from_number: mobile,
+        message: `📩 New Contact Inquiry:\n👤 ${name}\n📱 ${mobile}\n📝 ${requirement}`,
+      });
 
-      alert(
-        "✅ Your inquiry has been sent! DS Aqua Engineering will contact you soon."
-      );
-      setRequirement("");
-      setMobile("");
-      setName("");
+      message.success("✅ Your inquiry has been sent successfully!");
+      form.resetFields();
     } catch (error) {
       console.error("EmailJS Error:", error);
-      alert("❌ Failed to send message. Please try again later.");
+      message.error("❌ Failed to send message. Please try again later.");
     } finally {
       setLoading(false);
     }
@@ -54,150 +52,238 @@ export default function ContactPage() {
 
   return (
     <main className="min-h-screen bg-[#3d2f2a] text-gray-900">
-      {/* Header + Navigation */}
       <Header />
       <Navigation />
 
-      {/* Breadcrumb */}
-      <div className="bg-[#2a1f1c] py-3 px-4">
+      <div className="bg-[#2a1f1c] py-3 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[#f5c842]">
+          <Text className="text-[#f5c842] text-sm sm:text-base">
             <a href="/" className="hover:underline">
               Home
             </a>{" "}
             » Contact Us
-          </p>
+          </Text>
         </div>
       </div>
 
-      {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="bg-white rounded-lg p-8 shadow-md">
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Left: Contact Details */}
-            <div>
-              <h2 className="text-2xl font-bold mb-6 text-[#EA4E02]">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 py-8 sm:py-12">
+        <Card
+          className="bg-white rounded-lg shadow-md"
+          bodyStyle={{ padding: "2rem" }}
+        >
+          <Row gutter={[32, 32]}>
+            {/* ✅ Left: Contact Info */}
+            <Col xs={24} md={12}>
+              <Title level={3} className="text-[#EA4E02]">
                 Contact Details
-              </h2>
+              </Title>
 
-              <div className="space-y-6">
+              <div className="space-y-5">
                 {/* Contact Person */}
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-2xl">
-                    👤
-                  </div>
+                <Card
+                  size="small"
+                  bordered={false}
+                  className="bg-gray-50"
+                  bodyStyle={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "12px",
+                  }}
+                >
+                  <UserOutlined className="text-xl text-[#EA4E02]" />
                   <div>
-                    <p className="font-semibold text-gray-600">
-                      Contact Person:
-                    </p>
-                    <p className="font-bold text-lg">Gurdip Yadav (CEO)</p>
+                    <Text type="secondary">Contact Person:</Text>
+                    <br />
+                    <Text strong>Gurdip Yadav (CEO)</Text>
                   </div>
-                </div>
+                </Card>
 
                 {/* Address */}
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-gray-600" />
-                  </div>
-                  <div>
-                    <div className="flex items-center gap-3 mb-2">
-                      <p className="font-semibold text-gray-600">Address:</p>
-                      <button className="text-blue-600 underline hover:text-blue-800 font-medium">
-                        Get Direction
-                      </button>
+                <Card
+                  size="small"
+                  bordered={false}
+                  className="bg-gray-50"
+                  bodyStyle={{
+                    display: "flex",
+                    alignItems: "flex-start",
+                    gap: "12px",
+                  }}
+                >
+                  <EnvironmentOutlined className="text-xl text-[#EA4E02]" />
+                  <div style={{ flex: 1 }}>
+                    <div className="flex items-center gap-2 mb-1">
+                      <Text type="secondary">Address:</Text>
+                      <Button
+                        type="link"
+                        size="small"
+                        onClick={() => setShowMap(!showMap)}
+                        style={{ padding: 0 }}
+                      >
+                        {showMap ? "Hide Map" : "Get Direction"}
+                      </Button>
                     </div>
-                    <p className="font-bold">Gurdip Enterprise</p>
-                    <p className="text-gray-700 leading-relaxed">
-                      Ground Floor, Block No-E, Shop No-4,
-                      <br />
-                      Sumel Business Park 7, Near Soni Ni Chali, Rakhiyal,
-                      <br />
-                      Ahmedabad - 380023,
-                      <br />
-                      Gujarat, India
-                    </p>
+                    <Text strong>DS Aqua Engineering</Text>
+                    <br />
+                    <Text>
+                      Amod Residency, Shop Number 2, Near Arya Farm House,
+                      Pandit Colony, Sector 73, Noida, Gautam Budh Nagar, Uttar
+                      Pradesh - 201301, India
+                    </Text>
+
+                    {/* ✅ Small Embedded Map */}
+                    {showMap && (
+                      <div
+                        style={{
+                          borderRadius: "8px",
+                          overflow: "hidden",
+                          marginTop: "12px",
+                          boxShadow: "0 0 10px rgba(0,0,0,0.15)",
+                        }}
+                      >
+                        <iframe
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.142318266469!2d77.38919407618348!3d28.584265074853153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5f5430d77a7%3A0xf479e3dbe0308c89!2sAmod%20Residency!5e0!3m2!1sen!2sin!4v1699423761024!5m2!1sen!2sin"
+                          width="100%"
+                          height="220"
+                          allowFullScreen=""
+                          loading="lazy"
+                          style={{
+                            border: 0,
+                            filter: "grayscale(15%) contrast(1.05)",
+                          }}
+                        ></iframe>
+                      </div>
+                    )}
                   </div>
-                </div>
+                </Card>
 
                 {/* Phone */}
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-gray-600" />
-                  </div>
+                <Card
+                  size="small"
+                  bordered={false}
+                  className="bg-gray-50"
+                  bodyStyle={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "12px",
+                  }}
+                >
+                  <PhoneOutlined className="text-xl text-[#EA4E02]" />
                   <div>
-                    <p className="font-semibold text-gray-600 mb-2">Call Us:</p>
-                    <p className="font-bold text-xl text-[#1B9A83]">
+                    <Text type="secondary">Call Us:</Text>
+                    <br />
+                    <Text strong className="text-[#1B9A83]">
                       +91 98115 47246
-                    </p>
-                    <button className="mt-2 bg-[#f5c842] hover:bg-[#e5b832] text-black font-bold py-2 px-4 rounded flex items-center gap-2 transition">
-                      <MessageSquare className="w-4 h-4" />
+                    </Text>
+                    <br />
+                    <Button
+                      size="small"
+                      onClick={() => setIsModalOpen(true)}
+                      icon={<MessageOutlined />}
+                      style={{
+                        marginTop: "6px",
+                        backgroundColor: "#f5c842",
+                        border: "none",
+                        color: "#000",
+                        fontWeight: "500",
+                      }}
+                    >
                       Send SMS
-                    </button>
+                    </Button>
                   </div>
-                </div>
+                </Card>
               </div>
-            </div>
+            </Col>
 
-            {/* Right: Contact Form */}
-            <div>
-              <h2 className="text-2xl font-bold mb-6 text-[#EA4E02]">
+            {/* ✅ Right: Contact Form */}
+            <Col xs={24} md={12}>
+              <Title level={3} className="text-[#EA4E02]">
                 Contact Us
-              </h2>
-
-              {/* Requirement Textarea */}
-              <textarea
-                placeholder="Describe your requirements in detail, like:
-- What are you looking for?
-- Features / Specifications
-- Application / Usage
-- Minimum Order Quantity, etc."
-                value={requirement}
-                onChange={(e) => setRequirement(e.target.value)}
-                className="w-full border border-gray-300 rounded-lg p-3 mb-4 min-h-[150px] text-sm focus:outline-none focus:ring-2 focus:ring-[#f5c842] placeholder:text-gray-400"
-              />
-
-              {/* Mobile Number */}
-              <div className="flex gap-2 mb-4">
-                <div className="flex items-center gap-2 px-3 py-2 border rounded bg-gray-50 w-24 justify-center">
-                  <span className="text-xl">🇮🇳</span>
-                  <span className="text-sm font-medium">+91</span>
-                </div>
-                <input
-                  type="tel"
-                  placeholder="Enter your number"
-                  value={mobile}
-                  onChange={(e) => setMobile(e.target.value)}
-                  className="flex-1 border border-gray-300 rounded-lg p-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#f5c842] placeholder:text-gray-400"
-                />
-              </div>
-
-              {/* Name Input */}
-              <input
-                type="text"
-                placeholder="Enter your name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                className="w-full border border-gray-300 rounded-lg p-3 mb-6 text-sm focus:outline-none focus:ring-2 focus:ring-[#f5c842] placeholder:text-gray-400"
-              />
-
-              {/* Submit Button */}
-              <button
-                onClick={handleSubmit}
-                disabled={loading}
-                className={`w-full py-4 rounded-lg text-lg font-bold transition-all ${
-                  loading
-                    ? "bg-gray-400 cursor-wait"
-                    : "bg-[#1B9A83] hover:bg-[#17846F] text-white"
-                }`}
+              </Title>
+              <Form
+                form={form}
+                layout="vertical"
+                onFinish={handleSubmit}
+                autoComplete="off"
               >
-                {loading ? "Sending..." : "➜ Contact Now"}
-              </button>
-            </div>
-          </div>
-        </div>
+                {/* Requirement */}
+                <Form.Item
+                  name="requirement"
+                  label="Requirement Details"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please enter your requirement",
+                    },
+                  ]}
+                >
+                  <Input.TextArea
+                    rows={6}
+                    placeholder="Describe your requirement in detail..."
+                  />
+                </Form.Item>
+
+                {/* Mobile */}
+                <Form.Item
+                  name="mobile"
+                  label="Mobile Number"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please enter your mobile number",
+                    },
+                  ]}
+                >
+                  <Input
+                    prefix="+91 "
+                    placeholder="Enter your number"
+                    type="tel"
+                    maxLength={10}
+                  />
+                </Form.Item>
+
+                {/* Name */}
+                <Form.Item
+                  name="name"
+                  label="Your Name"
+                  rules={[
+                    { required: true, message: "Please enter your name" },
+                  ]}
+                >
+                  <Input placeholder="Enter your name" />
+                </Form.Item>
+
+                {/* Submit */}
+                <Form.Item>
+                  <Button
+                    type="primary"
+                    htmlType="submit"
+                    block
+                    loading={loading}
+                    style={{
+                      backgroundColor: "#1B9A83",
+                      border: "none",
+                      fontWeight: 600,
+                    }}
+                  >
+                    {loading ? "Sending..." : "Contact Now"}
+                  </Button>
+                </Form.Item>
+              </Form>
+            </Col>
+          </Row>
+        </Card>
       </div>
 
       <Footer />
+      <QuickContactModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        product={{
+          name: "Contact Us",
+          price: "",
+          details: { description: "General contact request from header." },
+        }}
+      />
     </main>
   );
 }

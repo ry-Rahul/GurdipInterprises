@@ -12,7 +12,7 @@ export default function WelcomeSection() {
     },
     {
       title: "GST Registration Date",
-      value: "15-07-2020",
+      value: "22-02-2022",
       icon: "📅",
     },
     {
@@ -32,50 +32,66 @@ export default function WelcomeSection() {
     },
     {
       title: "GST No.",
-      value: "24BITPS0834A1ZC",
+      value: "09CPEPS4868B1ZK",
       icon: "📄",
     },
   ];
 
   return (
-    <section className="bg-[#3d2f2a] py-12">
-      <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-[#f5c842] text-2xl font-bold mb-8">
+    // ✅ Section Wrapper
+    <section className="bg-[#3d2f2a] py-8 sm:py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        {/* ✅ Section Title */}
+        <h2 className="text-[#f5c842] text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-center sm:text-left">
           Welcome to Gurdip Enterprise
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        {/* ✅ Company Info Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8">
           {companyInfo.map((info, index) => (
-            <div key={index} className="flex items-start gap-4 text-white">
-              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-2xl flex-shrink-0">
+            <div
+              key={index}
+              className="flex sm:flex-row flex-col items-center sm:items-start gap-3 sm:gap-4 text-white bg-[#2a2220] p-3 sm:p-4 rounded-lg hover:shadow-lg transition-shadow"
+            >
+              {/* Icon */}
+              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-xl sm:text-2xl text-black flex-shrink-0">
                 {info.icon}
               </div>
-              <div>
-                <h3 className="font-semibold text-sm mb-1">{info.title}</h3>
-                <p className="text-gray-300 text-sm">{info.value}</p>
+
+              {/* Info Text */}
+              <div className="text-center sm:text-left">
+                <h3 className="font-semibold text-sm sm:text-base mb-1">
+                  {info.title}
+                </h3>
+                <p className="text-gray-300 text-xs sm:text-sm">{info.value}</p>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="flex items-start gap-6 mb-6">
+        {/* ✅ IndiaMART Trust Seal Section */}
+        <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 mb-6 sm:mb-8">
           <img
-            src="/indiamart-trust-seal.jpg"
-            alt="IndiaMART Trust Seal"
-            className="w-32 h-32 object-contain"
+            src="/logo.png"
+            alt="DS AQUA ENGINEERING"
+            className="w-24 h-24 sm:w-32 sm:h-32 object-contain"
           />
-          <div className="text-white">
-            <h3 className="text-xl font-bold mb-2">
-              IndiaMART Trust Seal Verified
+          <div className="text-center sm:text-left text-white">
+            <h3 className="text-lg sm:text-xl font-bold mb-1 sm:mb-2">
+              DS AQUA ENGINEERING
             </h3>
+            <p className="text-gray-300 text-xs sm:text-sm">
+              Verified for authenticity and service excellence.
+            </p>
           </div>
         </div>
 
-        <div className="text-white text-sm leading-relaxed">
+        {/* ✅ Company Description */}
+        <div className="text-white text-sm sm:text-base leading-relaxed">
           <p>
             Established as a <span className="font-semibold">Proprietor</span>{" "}
-            firm in the year <span className="font-semibold">2011</span>, we{" "}
-            <span className="font-semibold">"Gurdip Enterprise"</span> are a
+            firm in the year <span className="font-semibold">2019</span>, we{" "}
+            <span className="font-semibold">DS AQUA ENGINEERING</span> are a
             leading <span className="font-semibold">Manufacturer</span> of a
             wide range of{" "}
             <span className="font-semibold">
@@ -83,9 +99,14 @@ export default function WelcomeSection() {
             </span>
             , etc.
           </p>
-          <button className="mt-4 bg-[#f5c842] hover:bg-[#e5b832] text-black px-4 py-1 rounded text-xs font-semibold">
-            more...
-          </button>
+
+          <button
+          disabled
+          className="mt-4 bg-[#f5c842] hover:bg-[#e5b832] text-black px-5 py-2 rounded text-xs sm:text-sm font-semibold transition-colors disabled:bg-[#d4b842] disabled:cursor-not-allowed"
+        >
+          More...
+        </button>
+
         </div>
       </div>
     </section>

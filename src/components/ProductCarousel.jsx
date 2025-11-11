@@ -37,102 +37,121 @@ const products = [
 export default function ProductCarousel() {
   const [currentIndex, setCurrentIndex] = useState(2);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
 
+  // Detect screen size
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Auto play functionality
   useEffect(() => {
     if (!isAutoPlaying) return;
-
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % products.length);
-    }, 3000);
-
+    }, 2000);
     return () => clearInterval(interval);
   }, [isAutoPlaying]);
 
   const handlePrev = () => {
     setCurrentIndex((prev) => (prev - 1 + products.length) % products.length);
+    setIsAutoPlaying(false);
   };
 
   const handleNext = () => {
     setCurrentIndex((prev) => (prev + 1) % products.length);
+    setIsAutoPlaying(false);
   };
 
-  // Calculate positions for the stacked effect - NO ROTATION
   const getCardStyle = (index) => {
-    // const diff = index - currentIndex;
     const absIndex = (index - currentIndex + products.length) % products.length;
 
-    // Center card
+    // Mobile: single centered card
+    if (isMobile) {
+      if (absIndex === 0) {
+        return {
+          transform: "translateX(0%) scale(1)",
+          opacity: 1,
+          zIndex: 30,
+        };
+      }
+      return {
+        transform: "translateX(0%) scale(0.8)",
+        opacity: 0,
+        zIndex: 0,
+      };
+    }
+
+    // Desktop: stacked layout
     if (absIndex === 0) {
       return {
-        transform: "translateX(0%) scale(1.15) translateY(-10px)",
+        transform: "translateX(0%) scale(1.2) translateY(-15px)",
         zIndex: 30,
         opacity: 1,
       };
     }
-
-    // Left cards
-    if (absIndex === products.length - 1) {
-      return {
-        transform: "translateX(-85%) scale(0.85)",
-        zIndex: 20,
-        opacity: 1,
-      };
-    }
-    if (absIndex === products.length - 2) {
-      return {
-        transform: "translateX(-130%) scale(0.75) translateY(0px)",
-        zIndex: 10,
-        opacity: 1,
-      };
-    }
-
-    // Right cards
     if (absIndex === 1) {
       return {
-        transform: "translateX(85%) scale(0.85)",
+        transform: "translateX(90%) scale(0.9)",
         zIndex: 20,
         opacity: 1,
       };
     }
     if (absIndex === 2) {
       return {
-        transform: "translateX(130%) scale(0.75) translateY(0px)",
+        transform: "translateX(145%) scale(0.75)",
         zIndex: 10,
+        opacity: 0.6,
+      };
+    }
+    if (absIndex === products.length - 1) {
+      return {
+        transform: "translateX(-90%) scale(0.9)",
+        zIndex: 20,
         opacity: 1,
       };
     }
-
-    // Hidden cards
-    return {
-      transform: "translateX(0%) scale(0.5)",
-      zIndex: 0,
-      opacity: 0,
-    };
+    if (absIndex === products.length - 2) {
+      return {
+        transform: "translateX(-145%) scale(0.75)",
+        zIndex: 10,
+        opacity: 0.6,
+      };
+    }
+    return { transform: "translateX(0%) scale(0.5)", opacity: 0, zIndex: 0 };
   };
 
   return (
-    <div className="relative overflow-hidden bg-[#302222] flex items-center">
-      <div className=" mx-auto w-full py-4 mt-4">
+    <div className="relative overflow-hidden bg-gradient-to-b from-[#302222] to-[#1a1212] min-h-[400px] md:min-h-[500px] flex items-center">
+      <div className="mx-auto w-full px-4 py-8 md:py-12">
+        {/* Carousel Container */}
         <div
-          className="relative flex items-center justify-center py-4"
+          className="relative"
           onMouseEnter={() => setIsAutoPlaying(false)}
           onMouseLeave={() => setIsAutoPlaying(true)}
         >
-          {/* Cards */}
-          <div className="relative w-full max-w-4xl h-52 flex  justify-center ">
+          {/* Cards Container */}
+          <div className="relative w-full max-w-5xl mx-auto h-[280px] md:h-[350px] flex justify-center items-center">
             {products.map((product, index) => (
               <div
                 key={product.id}
                 className="absolute transition-all duration-700 ease-out"
                 style={getCardStyle(index)}
               >
-                <div className="bg-white  shadow-2xl border-8 border-gray-300 overflow-hidden w-44 h-52">
-                  <div className="w-full  flex items-center justify-center">
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      className=" object-contain"
-                    />
+                <div className="bg-white shadow-2xl rounded-sm overflow-hidden w-[220px] h-[260px] md:w-[220px] md:h-[280px] border-4 border-gray-200 hover:border-[#f5c842] transition-all">
+                  <div className="w-full h-full flex flex-col">
+                    <div className="flex-1 flex items-center justify-center p-1 bg-gradient-to-br from-gray-50 to-gray-100">
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        className="object-contain w-full h-full"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -142,26 +161,43 @@ export default function ProductCarousel() {
           {/* Navigation Arrows */}
           <button
             onClick={handlePrev}
-            className="absolute left-20 top-1/2 -translate-y-1/2 z-50 bg-white/90 hover:bg-white text-gray-800 rounded-full w-14 h-14 flex items-center justify-center shadow-xl transition-all hover:scale-110 border-2 border-gray-300"
+            className="absolute left-2 md:left-8 lg:left-16 top-1/2 -translate-y-1/2 z-50 bg-[#f5c842] hover:bg-[#ffd700] text-gray-900 rounded-full w-12 h-12 md:w-16 md:h-16 flex items-center justify-center shadow-2xl transition-all hover:scale-110 active:scale-95"
             aria-label="Previous"
           >
-            <ChevronLeft className="w-8 h-8" />
+            <ChevronLeft className="w-6 h-6 md:w-8 md:h-8 stroke-[3]" />
           </button>
 
           <button
             onClick={handleNext}
-            className="absolute right-20 top-1/2 -translate-y-1/2 z-50 bg-white/90 hover:bg-white text-gray-800 rounded-full w-14 h-14 flex items-center justify-center shadow-xl transition-all hover:scale-110 border-2 border-gray-300"
+            className="absolute right-2 md:right-8 lg:right-16 top-1/2 -translate-y-1/2 z-50 bg-[#f5c842] hover:bg-[#ffd700] text-gray-900 rounded-full w-12 h-12 md:w-16 md:h-16 flex items-center justify-center shadow-2xl transition-all hover:scale-110 active:scale-95"
             aria-label="Next"
           >
-            <ChevronRight className="w-8 h-8" />
+            <ChevronRight className="w-6 h-6 md:w-8 md:h-8 stroke-[3]" />
           </button>
         </div>
 
-        {/* Product Title */}
-        <div className="text-center ">
-          <h3 className="text-[#f5c842] font-bold tracking-wide drop-shadow-lg">
+        {/* Product Title & Description */}
+        <div className="text-center mt-1 md:mt-1 px-4">
+          <h3 className="text-[#f5c842] font-bold text-xl md:text-3xl tracking-wide drop-shadow-lg mb-2">
             {products[currentIndex].name}
           </h3>
+          <div className="flex justify-center gap-2 mt-4">
+            {products.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => {
+                  setCurrentIndex(index);
+                  setIsAutoPlaying(false);
+                }}
+                className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all ${
+                  index === currentIndex
+                    ? "bg-[#f5c842] w-8 md:w-12"
+                    : "bg-gray-500 hover:bg-gray-400"
+                }`}
+                aria-label={`Go to product ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>

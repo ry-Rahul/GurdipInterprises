@@ -8,7 +8,7 @@ export default function QuickContactModal({ isOpen, onClose, product }) {
 
   if (!isOpen || !product) return null;
 
-  // ✅ EmailJS Submit Function
+  // ✅ Handle Form Submit
   const handleSubmit = async () => {
     if (!mobile.trim()) {
       alert("Please enter your mobile number.");
@@ -48,38 +48,41 @@ export default function QuickContactModal({ isOpen, onClose, product }) {
   };
 
   return (
+    // ✅ Modal Overlay
     <div
-      className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4 z-52"
+      className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-2 sm:p-4 overflow-y-auto"
       onClick={onClose}
     >
+      {/* ✅ Modal Container */}
       <div
         className="relative bg-white w-full max-w-3xl rounded-xl shadow-2xl flex flex-col md:flex-row overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
+        {/* ❌ Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-500 hover:text-black transition"
+          className="absolute top-3 right-3 text-gray-500 hover:text-black transition"
         >
           <X size={24} />
         </button>
 
-        {/* -------- Left: Company Info -------- */}
-        <div className="md:w-1/3 bg-gray-50 border-r border-gray-200 flex flex-col items-center justify-center p-8 text-center">
-          <div className="bg-white border rounded-lg shadow-sm w-32 h-32 flex items-center justify-center mb-4">
+        {/* ✅ Left Section — Company Info */}
+        <div className="md:w-1/3 bg-gray-50 border-b md:border-b-0 md:border-r border-gray-200 flex flex-col items-center justify-center p-6 sm:p-8 text-center">
+          <div className="bg-white border rounded-lg shadow-sm w-24 h-24 sm:w-32 sm:h-32 flex items-center justify-center mb-3 sm:mb-4">
             <img
               src="/logo.png"
               alt="DS Aqua Engineering"
-              className="w-28 h-28 object-contain"
+              className="w-20 h-20 sm:w-28 sm:h-28 object-contain"
             />
           </div>
-          <h2 className="font-bold text-gray-700 text-lg">
+          <h2 className="font-bold text-gray-700 text-base sm:text-lg">
             DS Aqua Engineering
           </h2>
         </div>
 
-        {/* -------- Right: Contact Form -------- */}
-        <div className="flex-1 p-10 flex flex-col justify-center">
-          <h3 className="text-xl font-semibold mb-4 leading-snug">
+        {/* ✅ Right Section — Contact Form */}
+        <div className="flex-1 p-5 sm:p-8 flex flex-col justify-center">
+          <h3 className="text-base sm:text-xl font-semibold mb-4 leading-snug text-center md:text-left">
             Connect with{" "}
             <span className="text-[#17846F] font-bold">
               DS Aqua Engineering
@@ -88,25 +91,27 @@ export default function QuickContactModal({ isOpen, onClose, product }) {
           </h3>
 
           {/* Input Label */}
-          <label className="text-sm font-semibold mb-2">Mobile Number</label>
+          <label className="text-xs sm:text-sm font-semibold mb-2">
+            Mobile Number
+          </label>
 
-          {/* Input Box */}
-          <div className="flex items-center border border-gray-300 rounded-md overflow-hidden mb-4 focus-within:ring-2 focus-within:ring-[#17846F] transition">
-            <div className="px-4 py-2 bg-gray-100 flex items-center gap-1 border-r border-gray-200">
+          {/* Input Field */}
+          <div className="flex items-center border border-gray-300 rounded-md overflow-hidden mb-3 sm:mb-4 focus-within:ring-2 focus-within:ring-[#17846F] transition">
+            <div className="px-3 sm:px-4 py-2 bg-gray-100 flex items-center gap-1 border-r border-gray-200">
               <span>🇮🇳</span>
-              <span className="text-sm font-medium">+91</span>
+              <span className="text-xs sm:text-sm font-medium">+91</span>
             </div>
             <input
               type="tel"
               value={mobile}
               onChange={(e) => setMobile(e.target.value)}
               placeholder="Enter your mobile number"
-              className="flex-1 p-3 outline-none text-sm"
+              className="flex-1 p-2 sm:p-3 outline-none text-xs sm:text-sm"
             />
           </div>
 
           {/* Info Text */}
-          <p className="text-xs text-gray-500 mb-5">
+          <p className="text-xs text-gray-500 mb-4 sm:mb-5 text-center md:text-left">
             We will contact you on this number
           </p>
 
@@ -114,7 +119,7 @@ export default function QuickContactModal({ isOpen, onClose, product }) {
           <button
             onClick={handleSubmit}
             disabled={loading}
-            className={`w-full py-3 rounded-md text-white font-semibold text-base transition ${
+            className={`w-full py-2.5 sm:py-3 rounded-md text-white font-semibold text-sm sm:text-base transition ${
               loading
                 ? "bg-gray-400 cursor-wait"
                 : "bg-[#17846F] hover:bg-[#147560]"
