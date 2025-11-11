@@ -5,32 +5,20 @@ const products = [
   {
     id: 1,
     name: "Siemens Programming Cable",
-    image:
-      "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=400&h=400&fit=crop",
+    image: "/siemens-programming-cable.jpg",
   },
-  {
-    id: 2,
-    name: "USB Programming Cable",
-    image:
-      "https://images.unsplash.com/photo-1625948515291-69613efd103f?w=400&h=400&fit=crop",
-  },
-  {
-    id: 3,
-    name: "Siemens PLC S7 300",
-    image:
-      "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&h=400&fit=crop",
-  },
-  {
-    id: 4,
-    name: "Industrial Sensor",
-    image:
-      "https://images.unsplash.com/photo-1581092918484-8313e1f77c0f?w=400&h=400&fit=crop",
-  },
+  { id: 2, name: "Siemens 6es7972", image: "/siemens-6es7972.jpg" },
+  { id: 3, name: "Bge Y20-A1-174-3", image: "/industrial-connector.jpg" },
+  { id: 4, name: "Siemens PLC S7 300", image: "/siemens-plc-s7-300.jpg" },
   {
     id: 5,
-    name: "Control Modules",
-    image:
-      "https://images.unsplash.com/photo-1581092162384-8987c1d64718?w=400&h=400&fit=crop",
+    name: "Programming cable USB AC362",
+    image: "/usb-programming-cable.jpg",
+  },
+  {
+    id: 6,
+    name: "Bge 1.5 Sew Eurodrive Rectifier",
+    image: "/rectifier-module.jpg",
   },
 ];
 
