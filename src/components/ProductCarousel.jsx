@@ -149,7 +149,7 @@ export default function ProductCarousel() {
           {/* Navigation Arrows */}
           <button
             onClick={handlePrev}
-            className="absolute left-2 md:left-8 lg:left-16 top-1/2 -translate-y-1/2 z-50 bg-[#f5c842] hover:bg-[#ffd700] text-gray-900 rounded-full w-12 h-12 md:w-16 md:h-16 flex items-center justify-center shadow-2xl transition-all hover:scale-110 active:scale-95"
+            className="absolute left-2 md:left-8 lg:left-16 top-1/2 -translate-y-1/2 z-30 bg-[#f5c842] hover:bg-[#ffd700] text-gray-900 rounded-full w-12 h-12 md:w-16 md:h-16 flex items-center justify-center shadow-2xl transition-all hover:scale-110 active:scale-95"
             aria-label="Previous"
           >
             <ChevronLeft className="w-6 h-6 md:w-8 md:h-8 stroke-[3]" />
@@ -157,7 +157,7 @@ export default function ProductCarousel() {
 
           <button
             onClick={handleNext}
-            className="absolute right-2 md:right-8 lg:right-16 top-1/2 -translate-y-1/2 z-50 bg-[#f5c842] hover:bg-[#ffd700] text-gray-900 rounded-full w-12 h-12 md:w-16 md:h-16 flex items-center justify-center shadow-2xl transition-all hover:scale-110 active:scale-95"
+            className="absolute right-2 md:right-8 lg:right-16 top-1/2 -translate-y-1/2 z-30 bg-[#f5c842] hover:bg-[#ffd700] text-gray-900 rounded-full w-12 h-12 md:w-16 md:h-16 flex items-center justify-center shadow-2xl transition-all hover:scale-110 active:scale-95"
             aria-label="Next"
           >
             <ChevronRight className="w-6 h-6 md:w-8 md:h-8 stroke-[3]" />
