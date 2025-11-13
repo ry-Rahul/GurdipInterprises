@@ -19,8 +19,6 @@ import productsData from "../assets/product.json";
 export default function Product() {
   const { category } = useParams();
   const location = useLocation();
-
-  // Get products array from JSON
   const products = productsData.products;
 
   const currentCategory = products.find(
@@ -35,7 +33,6 @@ export default function Product() {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
 
-  // Mobile sidebar state
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const [hoveredImage, setHoveredImage] = useState({});
@@ -44,7 +41,7 @@ export default function Product() {
   const handleScrollToItem = (itemName) => {
     const element = itemRefs.current[itemName];
     if (element) element.scrollIntoView({ behavior: "smooth", block: "start" });
-    setSidebarOpen(false); // Close sidebar after navigation on mobile
+    setSidebarOpen(false);
   };
 
   useEffect(() => {
@@ -56,9 +53,10 @@ export default function Product() {
       const itemName = location.state.scrollToItem;
       const element = itemRefs.current[itemName];
       if (element) {
-        setTimeout(() => {
-          element.scrollIntoView({ behavior: "smooth", block: "start" });
-        }, 300);
+        setTimeout(
+          () => element.scrollIntoView({ behavior: "smooth", block: "start" }),
+          300
+        );
       }
     }
   }, [location.state]);
@@ -73,7 +71,7 @@ export default function Product() {
   };
 
   const handleCategoryClick = () => {
-    setSidebarOpen(false); // Close sidebar on mobile when category is clicked
+    setSidebarOpen(false);
   };
 
   return (
@@ -82,7 +80,6 @@ export default function Product() {
       <Navigation />
 
       <div className="max-w-7xl mx-auto px-2 py-2">
-        {/* Mobile Filter Button */}
         <div className="lg:hidden mb-2">
           <button
             onClick={() => setSidebarOpen(true)}
@@ -94,7 +91,6 @@ export default function Product() {
         </div>
 
         <div className="grid lg:grid-cols-[250px_1fr] gap-2">
-          {/* Desktop Sidebar */}
           <aside className="hidden lg:block bg-[#2a2220] text-white rounded-lg p-2 sticky top-4 h-fit max-h-[calc(100vh-2rem)] overflow-y-auto">
             <h3 className="text-lg font-bold mb-4 bg-[#FFA601] text-black px-2 py-1 rounded-md">
               Our Product Range
@@ -130,6 +126,7 @@ export default function Product() {
                           <ChevronRight size={14} />
                         )}
                       </button>
+
                       <Link
                         to={`/product/${prod.category
                           .toLowerCase()
@@ -148,7 +145,7 @@ export default function Product() {
                               onClick={() => handleScrollToItem(item.name)}
                               className="flex text-left w-full px-3 py-1.5 text-sm rounded items-center gap-2 hover:bg-[#FFE23A] hover:text-black"
                             >
-                              <ChevronsRight className="w-4 h-4 flex-shrink-0" />
+                              <ChevronsRight className="w-4 h-4" />
                               {item.name}
                             </button>
                           </li>
@@ -161,106 +158,114 @@ export default function Product() {
             </ul>
           </aside>
 
-          {/* Mobile Sidebar Drawer */}
-          {sidebarOpen && (
-            <>
-              {/* Overlay */}
-              <div
-                className="fixed inset-0 bg-black/50 z-40 lg:hidden"
-                onClick={() => setSidebarOpen(false)}
-              />
+          <div
+            className={`
+              fixed inset-0 z-50 lg:hidden
+              transition-opacity duration-300
+              ${
+                sidebarOpen
+                  ? "opacity-100 pointer-events-auto"
+                  : "opacity-0 pointer-events-none"
+              }
+            `}
+          >
+            <div
+              className="absolute inset-0 bg-black/50"
+              onClick={() => setSidebarOpen(false)}
+            />
 
-              {/* Drawer */}
-              <aside className="fixed top-0 left-0 h-full w-80 max-w-[85vw] bg-[#2a2220] text-white shadow-2xl z-50 overflow-y-auto lg:hidden">
-                {/* Header */}
-                <div className="flex items-center justify-between p-4 border-b border-white/20 sticky top-0 bg-[#2a2220]">
-                  <h3 className="text-lg font-bold">Product Categories</h3>
-                  <button
-                    onClick={() => setSidebarOpen(false)}
-                    className="p-2 hover:bg-white/10 rounded-lg transition-colors"
-                  >
-                    <X className="w-5 h-5" />
-                  </button>
-                </div>
+            <aside
+              className={`
+                absolute top-0 left-0 h-full w-80 max-w-[85vw]
+                bg-[#2a2220] text-white shadow-2xl overflow-y-auto
+                transition-transform duration-300 ease-out
+                ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}
+              `}
+            >
+              <div className="flex items-center justify-between p-4 border-b border-white/20">
+                <h3 className="text-lg font-bold">Product Categories</h3>
+                <button
+                  onClick={() => setSidebarOpen(false)}
+                  className="p-2 hover:bg-white/10 rounded-lg transition-colors"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
 
-                {/* Category List */}
-                <div className="p-4">
-                  <ul className="space-y-1">
-                    {products.map((prod, index) => {
-                      const isActive = prod.category === expandedCategory;
-                      const isCurrent =
-                        prod.category === currentCategory?.category;
+              <div className="p-4">
+                <ul className="space-y-1">
+                  {products.map((prod, index) => {
+                    const isActive = prod.category === expandedCategory;
+                    const isCurrent =
+                      prod.category === currentCategory?.category;
 
-                      return (
-                        <li
-                          key={index}
-                          className={`rounded-md ${
+                    return (
+                      <li
+                        key={index}
+                        className={`rounded-md ${
+                          isCurrent
+                            ? "border border-dashed border-[#FFA601]"
+                            : ""
+                        }`}
+                      >
+                        <div
+                          className={`flex items-center justify-between px-3 py-3 text-sm border-b-[0.5px] border-white transition-colors ${
                             isCurrent
-                              ? "border border-dashed border-[#FFA601]"
-                              : ""
+                              ? "bg-[#FFA601] text-black font-semibold"
+                              : "hover:bg-[#f5c842] hover:text-black"
                           }`}
                         >
-                          <div
-                            className={`flex items-center justify-between px-3 py-3 text-sm border-b-[0.5px] border-white transition-colors ${
-                              isCurrent
-                                ? "bg-[#FFA601] text-black font-semibold"
-                                : "hover:bg-[#f5c842] hover:text-black"
-                            }`}
+                          <button
+                            onClick={() =>
+                              setExpandedCategory(
+                                isActive ? null : prod.category
+                              )
+                            }
+                            className="p-1"
                           >
-                            <button
-                              onClick={() =>
-                                setExpandedCategory(
-                                  isActive ? null : prod.category
-                                )
-                              }
-                              className="p-1"
-                            >
-                              {isActive ? (
-                                <ChevronDown size={16} />
-                              ) : (
-                                <ChevronRight size={16} />
-                              )}
-                            </button>
-                            <Link
-                              to={`/product/${prod.category
-                                .toLowerCase()
-                                .replace(/\s+/g, "-")}`}
-                              onClick={() => handleCategoryClick(prod)}
-                              className="flex-1 ml-2"
-                            >
-                              {prod.category}
-                            </Link>
-                          </div>
+                            {isActive ? (
+                              <ChevronDown size={16} />
+                            ) : (
+                              <ChevronRight size={16} />
+                            )}
+                          </button>
 
-                          {isActive && (
-                            <ul className="ml-6 mt-2 mb-2 space-y-1">
-                              {prod.items?.map((item, i) => (
-                                <li key={i}>
-                                  <button
-                                    onClick={() =>
-                                      handleScrollToItem(item.name)
-                                    }
-                                    className="flex text-left w-full px-3 py-2 text-sm rounded items-center gap-2 hover:bg-[#FFE23A] hover:text-black transition-colors"
-                                  >
-                                    <ChevronsRight className="w-4 h-4 flex-shrink-0" />
-                                    <span className="line-clamp-2">
-                                      {item.name}
-                                    </span>
-                                  </button>
-                                </li>
-                              ))}
-                            </ul>
-                          )}
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
-              </aside>
-            </>
-          )}
+                          <Link
+                            to={`/product/${prod.category
+                              .toLowerCase()
+                              .replace(/\s+/g, "-")}`}
+                            onClick={() => handleCategoryClick(prod)}
+                            className="flex-1 ml-2"
+                          >
+                            {prod.category}
+                          </Link>
+                        </div>
 
-          {/* Product Details */}
+                        {isActive && (
+                          <ul className="ml-6 mt-2 mb-2 space-y-1">
+                            {prod.items?.map((item, i) => (
+                              <li key={i}>
+                                <button
+                                  onClick={() => handleScrollToItem(item.name)}
+                                  className="flex text-left w-full px-3 py-2 text-sm rounded items-center gap-2 hover:bg-[#FFE23A] hover:text-black transition-colors"
+                                >
+                                  <ChevronsRight className="w-4 h-4" />
+                                  <span className="line-clamp-2">
+                                    {item.name}
+                                  </span>
+                                </button>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            </aside>
+          </div>
+
           <section className="bg-white rounded-lg p-4 md:p-6 shadow-md overflow-hidden">
             <div className="mb-6">
               <h1 className="text-xl md:text-2xl font-bold text-[#EA4E02] mb-2">
@@ -318,7 +323,6 @@ export default function Product() {
                       <div>
                         {item?.image && (
                           <>
-                            {/* Main Image */}
                             <div
                               className="border rounded-lg p-3 bg-gray-50 mb-3 flex justify-center items-center cursor-pointer h-48 md:h-64 overflow-hidden"
                               onClick={() => {
@@ -333,7 +337,6 @@ export default function Product() {
                               />
                             </div>
 
-                            {/* Thumbnails */}
                             <div className="flex gap-2 overflow-x-auto pb-2">
                               {item.image.map((img, idx) => (
                                 <img
@@ -361,7 +364,6 @@ export default function Product() {
                         )}
                       </div>
 
-                      {/* Product Details */}
                       <div>
                         <h3 className="font-bold mb-2 text-base md:text-lg">
                           Product Details:
@@ -408,14 +410,12 @@ export default function Product() {
         </div>
       </div>
 
-      {/* Product Contact Modal */}
       <ProductModal
         isOpen={modalOpen}
         onClose={() => setModalOpen(false)}
         product={selectedProduct}
       />
 
-      {/* Image Preview Modal */}
       <ImagePreviewModal
         isOpen={imageModalOpen}
         images={selectedProduct?.image || []}

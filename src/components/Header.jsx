@@ -1,5 +1,6 @@
+"use client";
+
 import { IoIosMail, IoMdSearch } from "react-icons/io";
-// ✅ Import all required dependencies
 import { useContext, useEffect, useRef, useState } from "react";
 
 import { Context } from "../store/ContextProvider";
@@ -11,22 +12,24 @@ import { products } from "../assets/product.json";
 import { useNavigate } from "react-router-dom";
 
 export default function Header() {
-  // ✅ State variables
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [contactType, setContactType] = useState("");
+
   const { searchQuery, setSearchQuery } = useContext(Context);
   const [filteredResults, setFilteredResults] = useState([]);
   const [showDropdown, setShowDropdown] = useState(false);
-  const dropdownRef = useRef(null);
+
+  const desktopDropdownRef = useRef(null);
+  const mobileDropdownRef = useRef(null);
   const navigate = useNavigate();
 
-  // ✅ Open modal for Call or Email
+  // ---------------- OPEN MODAL ----------------
   const openModal = (type) => {
     setContactType(type);
     setIsModalOpen(true);
   };
 
-  // ✅ Handle search input
+  // ---------------- SEARCH HANDLER ----------------
   const handleSearch = (e) => {
     const query = e.target.value.toLowerCase();
     setSearchQuery(query);
@@ -38,6 +41,7 @@ export default function Header() {
     }
 
     const matches = [];
+
     products.forEach((category) => {
       category.items.forEach((item) => {
         if (item.name.toLowerCase().includes(query)) {
@@ -53,145 +57,215 @@ export default function Header() {
     setShowDropdown(true);
   };
 
-  // ✅ Handle product select
+  // ---------------- REDIRECT TO PRODUCT PAGE ----------------
   const handleSelect = (item) => {
-    const categorySlug = item.category.toLowerCase().replace(/\s+/g, "-");
-    navigate(`/product/${categorySlug}`, {
-      state: { scrollToItem: item.name },
-    });
+    console.log(item);
     setShowDropdown(false);
     setSearchQuery("");
     setFilteredResults([]);
+
+    const categorySlug = item.category.toLowerCase().replace(/\s+/g, "-");
+
+    setTimeout(() => {
+      navigate(`/product/${categorySlug}`, {
+        state: { scrollToItem: item.name },
+      });
+    }, 10);
   };
 
-  // ✅ Close dropdown when clicked outside
+  // ---------------- CLOSE DROPDOWN WHEN CLICK OUTSIDE ----------------
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+    const handler = (e) => {
+      if (
+        desktopDropdownRef.current &&
+        !desktopDropdownRef.current.contains(e.target) &&
+        mobileDropdownRef.current &&
+        !mobileDropdownRef.current.contains(e.target)
+      ) {
         setShowDropdown(false);
       }
     };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+
+    document.addEventListener("mousedown", handler);
+    document.addEventListener("touchstart", handler);
+
+    return () => {
+      document.removeEventListener("mousedown", handler);
+      document.removeEventListener("touchstart", handler);
+    };
   }, []);
 
   return (
     <>
-      {/* ---------------- HEADER ---------------- */}
-      <header className="bg-[#130505] text-white px-4 sm:px-6 py-3 sm:py-4">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 sm:gap-6">
-          {/* ---------------- LEFT: Logo + Info ---------------- */}
-          <div className="flex items-center justify-between sm:justify-start w-full sm:w-auto">
-            <div className="flex items-center gap-3 sm:gap-4">
+      {/* ============= MOBILE HEADER ============= */}
+      <header className="lg:hidden bg-[#130505] text-white px-4 py-3 border-b border-orange-600/20">
+        <div className="flex items-center justify-between gap-2 mb-3">
+          {/* LOGO */}
+          <div className="flex items-center gap-2 flex-1 min-w-0">
+            <img
+              src="/logo.png"
+              alt="DS Aqua Engineering Logo"
+              onClick={() => navigate("/")}
+              className="w-10 h-10 rounded cursor-pointer"
+            />
+            <div>
+              <h1 className="text-sm font-bold tracking-wide">DS AQUA</h1>
+              <p className="text-xs text-gray-400">Engineering</p>
+            </div>
+          </div>
+
+          {/* CALL + EMAIL ICONS */}
+          <div className="flex items-center gap-2 flex-shrink-0">
+            <button
+              onClick={() => openModal("Call Request")}
+              className="bg-[#f5c842] text-black p-3 rounded-lg hover:bg-[#e5b832] transition-all"
+            >
+              <FiPhoneCall className="w-5 h-5" />
+            </button>
+
+            <button
+              onClick={() => openModal("Email Inquiry")}
+              className="bg-[#e85d2a] text-white p-3 rounded-lg hover:bg-[#d14e21] transition-all"
+            >
+              <IoIosMail className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+
+        {/* SEARCH BAR MOBILE */}
+        <div className="relative" ref={mobileDropdownRef}>
+          <div className="flex items-center bg-white rounded-lg overflow-hidden">
+            <IoMdSearch className="w-4 h-4 mx-3 text-black" />
+            <input
+              type="text"
+              placeholder="Search products..."
+              value={searchQuery}
+              onChange={handleSearch}
+              onFocus={() => setShowDropdown(true)}
+              className="text-black px-2 py-2.5 w-full text-sm outline-none"
+            />
+          </div>
+
+          {/* DROPDOWN MOBILE */}
+          {showDropdown && (
+            <ul className="absolute left-0 right-0 bg-white text-black mt-1 rounded-lg shadow-lg border border-gray-200 max-h-48 overflow-auto z-50">
+              {filteredResults.length > 0 ? (
+                filteredResults.map((item, idx) => (
+                  <li
+                    key={idx}
+                    onClick={() => {
+                      setTimeout(() => handleSelect(item), 50);
+                    }}
+                    className="px-4 py-2 text-sm hover:bg-[#f5c842] cursor-pointer border-b border-gray-100"
+                  >
+                    <div className="font-semibold text-xs">{item.name}</div>
+                    <div className="text-xs text-gray-500">{item.category}</div>
+                  </li>
+                ))
+              ) : (
+                <li className="px-4 py-3 text-center text-gray-500 text-xs">
+                  No results
+                </li>
+              )}
+            </ul>
+          )}
+        </div>
+      </header>
+
+      {/* ============= DESKTOP HEADER ============= */}
+      <header className="hidden lg:block bg-[#130505] text-white px-8 py-6 border-b border-orange-600/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-center justify-between mb-6">
+            {/* LEFT */}
+            <div className="flex items-center gap-6 flex-1">
               <img
                 src="/logo.png"
+                alt="Logo"
                 onClick={() => navigate("/")}
-                alt="Gurdip Enterprise Logo"
-                className="w-10 h-10 sm:w-12 sm:h-12 rounded"
+                className="w-16 h-16 rounded cursor-pointer"
               />
+
               <div>
-                <h1 className="text-lg sm:text-2xl font-bold tracking-wide">
+                <h1 className="text-3xl font-bold tracking-wide">
                   DS AQUA ENGINEERING
                 </h1>
-                <div className="hidden sm:flex items-center gap-4 text-xs text-gray-300 mt-1">
-                  <span className="flex items-center gap-1 text-white">
-                    <FaLocationDot className="text-[10px]" />
+
+                <div className="flex items-center gap-8 text-sm text-gray-300 mt-3">
+                  <span className="flex items-center gap-2">
+                    <FaLocationDot className="text-base" />
                     {address.address.city}, {address.address.state}
                   </span>
-                  <span className="flex items-center gap-1 text-white">
-                    ✓ GST No. 09CPEPS4868B1ZK
-                  </span>
+
+                  <span>✓ GST No. 09CPEPS4868B1ZK</span>
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* ---------------- MOBILE: Location + GST ---------------- */}
-          <div className="flex sm:hidden flex-col text-xs text-gray-300 mt-1">
-            <span className="flex items-center gap-1 text-white">
-              <FaLocationDot className="text-[10px]" />
-              {address.address.city}, {address.address.state}
-            </span>
-            <span className="flex items-center gap-1 text-white">
-              ✓ GST No. 09CPEPS4868B1ZK
-            </span>
-          </div>
-
-          {/* ---------------- RIGHT: Buttons + Search ---------------- */}
-          <div
-            className="flex flex-col items-center sm:items-end gap-3 w-full sm:w-auto"
-            ref={dropdownRef}
-          >
-            {/* --- CALL + EMAIL BUTTONS --- */}
-            <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 w-full sm:w-auto">
-              {/* CALL BUTTON */}
+            {/* RIGHT — SAME HEIGHT BUTTONS */}
+            <div className="flex items-center gap-4">
               <button
                 onClick={() => openModal("Call Request")}
-                className="relative bg-[#f5c842] text-black font-semibold rounded-md px-3 py-2 w-full sm:w-48 flex justify-center items-center gap-2 hover:bg-[#e5b832] transition-colors"
+                className="bg-[#f5c842] text-black font-bold rounded-lg px-6 py-4 h-[60px] flex items-center gap-3 hover:bg-[#e5b832] transition-all"
               >
-                <FiPhoneCall className="w-5 h-5 absolute left-3 sm:static" />
-                <div className="text-center">
-                  <div className="text-sm font-bold">Call 9811547246</div>
-                  <div className="text-[11px]">86% Response Rate</div>
-                </div>
+                <FiPhoneCall className="w-5 h-5" />
+                <span className="text-sm font-bold">9811547246</span>
               </button>
 
-              {/* EMAIL BUTTON */}
               <button
                 onClick={() => openModal("Email Inquiry")}
-                className="relative bg-[#e85d2a] text-white font-semibold rounded-md px-3 py-3 w-full sm:w-48 flex justify-center items-center gap-2 hover:bg-[#d14e21] transition-colors"
+                className="bg-[#e85d2a] text-white font-bold rounded-lg px-6 py-4 h-[60px] flex items-center gap-3 hover:bg-[#d14e21] transition-all"
               >
-                <IoIosMail className="w-5 h-5 absolute left-3 sm:static" />
-                <span className="whitespace-nowrap">Send Email</span>
+                <IoIosMail className="w-5 h-5" />
+                <span className="text-sm font-bold">Send Email</span>
+              </button>
+            </div>
+          </div>
+
+          {/* SEARCH BAR DESKTOP */}
+          <div className="relative max-w-md" ref={desktopDropdownRef}>
+            <div className="flex items-center bg-white rounded-lg overflow-hidden">
+              <IoMdSearch className="w-5 h-5 mx-4 text-black" />
+              <input
+                type="text"
+                placeholder="Search Products & Services"
+                value={searchQuery}
+                onChange={handleSearch}
+                onFocus={() => setShowDropdown(true)}
+                className="text-black px-3 py-3 w-full text-sm outline-none"
+              />
+              <button className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-5 py-3 text-sm font-bold">
+                Search
               </button>
             </div>
 
-            {/* --- SEARCH BAR --- */}
-            <div className="relative mt-2 w-full sm:w-auto">
-              <div className="flex items-center bg-white rounded-md overflow-hidden">
-                <IoMdSearch color="black" className="w-5 h-5 mx-2" />
-                <input
-                  type="text"
-                  placeholder="Search Products/Services"
-                  value={searchQuery}
-                  onChange={handleSearch}
-                  onFocus={() => setShowDropdown(true)}
-                  className="border-0 focus:outline-none text-black px-2 py-2 w-full sm:w-64 text-sm"
-                />
-                <button className="bg-[#4a4a4a] hover:bg-[#3a3a3a] text-white px-3 py-2 text-sm">
-                  Search
-                </button>
-              </div>
-
-              {/* 🔽 Search Dropdown */}
-              {showDropdown && (
-                <ul className="absolute left-0 w-full bg-white text-black mt-1 rounded-md shadow-lg border border-gray-200 max-h-60 overflow-auto z-50">
-                  {filteredResults.length > 0 ? (
-                    filteredResults.map((item, idx) => (
-                      <li
-                        key={idx}
-                        onClick={() => handleSelect(item)}
-                        className="px-3 py-2 text-sm hover:bg-[#f5c842] hover:text-black cursor-pointer border-b border-gray-100 last:border-0"
-                      >
-                        <div className="font-semibold">{item.name}</div>
-                        <div className="text-xs text-gray-500">
-                          {item.category}
-                        </div>
-                      </li>
-                    ))
-                  ) : (
-                    <li className="px-3 py-2 text-center text-gray-500 text-sm">
-                      No Data Found
+            {/* DROPDOWN DESKTOP */}
+            {showDropdown && (
+              <ul className="absolute left-0 bg-white text-black mt-2 rounded-lg shadow-xl border border-gray-200 max-h-96 overflow-auto z-50 w-full">
+                {filteredResults.length > 0 ? (
+                  filteredResults.map((item, idx) => (
+                    <li
+                      key={idx}
+                      onMouseDown={() => handleSelect(item)}
+                      className="px-5 py-3 hover:bg-[#f5c842] cursor-pointer border-b border-gray-100"
+                    >
+                      <div className="font-semibold">{item.name}</div>
+                      <div className="text-xs text-gray-500">
+                        {item.category}
+                      </div>
                     </li>
-                  )}
-                </ul>
-              )}
-            </div>
+                  ))
+                ) : (
+                  <li className="px-5 py-4 text-center text-gray-500 text-sm">
+                    No results found
+                  </li>
+                )}
+              </ul>
+            )}
           </div>
         </div>
       </header>
 
-      {/* ---------------- QUICK CONTACT MODAL ---------------- */}
+      {/* CONTACT MODAL */}
       <QuickContactModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
