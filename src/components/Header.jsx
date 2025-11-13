@@ -85,6 +85,7 @@ export default function Header() {
             <div className="flex items-center gap-3 sm:gap-4">
               <img
                 src="/logo.png"
+                onClick={() => navigate("/")}
                 alt="Gurdip Enterprise Logo"
                 className="w-10 h-10 sm:w-12 sm:h-12 rounded"
               />
@@ -130,7 +131,7 @@ export default function Header() {
               >
                 <FiPhoneCall className="w-5 h-5 absolute left-3 sm:static" />
                 <div className="text-center">
-                  <div className="text-sm font-bold">Call 8048976553</div>
+                  <div className="text-sm font-bold">Call 9811547246</div>
                   <div className="text-[11px]">86% Response Rate</div>
                 </div>
               </button>
