@@ -106,11 +106,13 @@ export default function Header() {
               src="/logo.png"
               alt="DS Aqua Engineering Logo"
               onClick={() => navigate("/")}
-              className="w-10 h-10 rounded cursor-pointer"
+              className="w-12 h-12 rounded cursor-pointer"
             />
-            <div>
-              <h1 className="text-sm font-bold tracking-wide">DS AQUA</h1>
-              <p className="text-xs text-gray-400">Engineering</p>
+            <div className="">
+              <h1 className="text-sm font-bold tracking-wide p-0 m-0">
+                DS AQUA
+              </h1>
+              <p className="text-xs ">Engineering</p>
             </div>
           </div>
 
