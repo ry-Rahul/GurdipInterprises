@@ -1,428 +1,934 @@
 {
-  "products": [
-    {
-      "category": "Programming Cables",
-        "description":"Our product range includes a wide range of siemens programming cable, usb sc09 fx mitsubishi plc programming cable, siemens logo plc programming cable, usb 1761 cbl pm02 plc programming cable, usb qc30r2 programming cable and usbacab230 programming cable.",
-      "items": [
-        {
-          "name": "Siemens Programming Cable",
-          "price": "Rs 2,450",
-          "details": {
-            "minimumOrderQuantity": 1,
-            "cableType": "USB",
-            "color": "Black",
-            "material": "Copper",
-            "usageApplication": "PLC",
-            "packagingType": "Box",
-            "countryOfOrigin": "Made in India",
-             "image":[
-                "../images/SiemensProgrammingCable1.jpeg",
-                "../images/SiemensProgrammingCable2.jpeg"
-             ],
-            "description": "With sincerity and hard work of our professionals, we have carved a niche for ourselves in this domain by providing a premium quality of Programming Cable."
-          }
-        },
-        {
-          "name": "Usb Sc09 Fx Mitsubishi Plc Programming Cable",
-          "price": "Rs 1,650",
-          "details": {
-              "color": "Black",
-              "material": "PVC",
-            "cableType": "USB",
-            "usageApplication": "PROGRAMMING",
-            "length": "2 M",
-            "inputType":"Display Port Male",
-            "packagingType": "Box",
-            "countryOfOrigin": "Made in India",
-             "image":[
-               "../images/usb-sc09-fx-mitsubishi-plc-programming-cable-1.jpg",
-               "../images/usb-sc09-fx-mitsubishi-plc-programming-cable-3.webp",
-                "../images/usb-sc09-fx-mitsubishi-plc-programming-cable-2.webp"
-
-             ],
-            "description": "WE ARE TRADERS IN SIEMENS PLC  PROGRAMMING CABLE , SIEMENS PLC AND ANALOGE MODULE , EXPANSION MODULE INPUT MODULE OUTPUT MODULE AND OTHER ACCESSORIES IN PAN INDIA LOCATION"
-          }
-        },
-        {
-          "name": "Siemens Logo Plc Programming Cable",
-          "price": "Rs 1,650",
-          "details": {
-            "color": "Black",
-            "material": "PVC",
-            "cableType": "USB",
-            "usageApplication": "PROGRAMMING",
-            "length": "2 M",
-            "inputType":"Display Port Male",
-            "countryOfOrigin": "Made in India",
-             "image":[
-               "../images/siemens-logo-plc-programming-cable-1.webp",
-               "../images/siemens-logo-plc-programming-cable-2.webp",
-                "../images/siemens-logo-plc-programming-cable-3.webp"
-
-             ],
-            "description": "WE ARE TRADERS IN SIEMENS PLC  PROGRAMMING CABLE , SIEMENS PLC AND ANALOGE MODULE , EXPANSION MODULE INPUT MODULE OUTPUT MODULE AND OTHER ACCESSORIES IN PAN INDIA LOCATION"
-          }
-        },
-        {
-          "name": "Usb 1761 Cbl Pm02 Plc Programming Cable",
-          "price": "Rs 1,650",
-          "details": {
-            "color": "Black",
-            "material": "PVC",
-            "cableType": "USB",
-            "usageApplication": "PROGRAMMING",
-            "length": "2 M",
-            "inputType":"Display Port Male",
-            "modelNameNumber":"Usb 1761 Cbl Pm02",
-            "countryOfOrigin": "Made in India",
-             "image":[
-               "../images/usb-1761-cbl-pm02-plc-programming-cable-1.webp",
-               "../images/usb-1761-cbl-pm02-plc-programming-cable-2.webp",
-                "../images/usb-1761-cbl-pm02-plc-programming-cable-3.webp"
-
-             ],
-            "description": "WE ARE TRADERS IN SIEMENS PLC  PROGRAMMING CABLE , SIEMENS PLC AND ANALOGE MODULE , EXPANSION MODULE INPUT MODULE OUTPUT MODULE AND OTHER ACCESSORIES IN PAN INDIA LOCATION"
-          }
-        }
-      ]
-    },
-    {
-      "category": "Siemens Plc",
-      "description":"Providing you the best range of siemens 6es7972 0cb20 0xa0, usb- fx 232 cab1 programming cable, siemens logo programming cable, 7mh4930 0aa01 siemense plc and siwarex module s7 200 with effective & timely delivery.",
-      "items": [
-        {
-            "name": "Siemens 6es7972 0cb20 0xa0"
-        },
-        {
-            "name":"USB- FX 232 CAB1 PROGRAMMING CABLE"
-        },
-        {
-            "name":"Siemens Logo Programming Cable"
-        },
-        {
-            "name":"7mh4930 0aa01 SIEMENSE PLC"
-        }
-      ]
-    },
-    {
-      "category": "Input Module",
-      "description":"Manufacturer of a wide range of products which include b&r x20-ai-1744-3 analog input module, x20 ai 1744, b&r x20 di 2377, x20aia744 load cell module and b & r x20do9322 base module.",
-      "items": [
-        {
-            "name":"B&R X20-AI-1744-3 Analog Input Module"
-        },
-        {
-            "name":"X20 Ai 1744"
-        },
-        {
-            "name":"B&R X20 DI 2377"
-        },
-        {
-            "name":"X20AIA744 Load Cell Module"
-        }
-      ]
-    },
-    {
-      "category": "Siemens Modules",
-      "items": [
-        {
-            "name":"Siemens PLC S7 300"
-        },
-        {
-            "name":"Siemens S7 200 Cn Plc Cable"
-        },
-        {
-            "name":"Plc Expansion Module 6es7 223 1bl22 0xb0"
-        },
-        {
-            "name":"6gk1571 0ba00 0aa0 Siemens"
-        }
-      ]
-    },
-    {
-      "category": "Programmable Logic Controller",
-      "description":"Offering you a complete choice of products which include programming cable usb-ac30r2-9ss, usb-ac30r2-9ss mitsubishi plc cable, mitsubishi plc programing cable, usb-acab230 - delta plc cable, fx-usb-aw for mitsubishi fx1n/2n/fx3uc/fx3g series and delta hmi & plc usb programming cable uc-prg020 12a plc programming cable.",
-      "items": [
-        {
-            "name":"Programming cable USB-AC30R2-9SS"
-        },
-        {
-            "name":"USB-AC30R2-9SS Mitsubishi PLC Cable"
-        },
-        {
-            "name":"Mitsubishi Plc Programing Cable"
-        },
-        {
-            "name":"USB-ACAB230 - DELTA PLC Cable"
-        }
-      ]
-    },
-    {
-      "category": "Rectifier",
-      "description":"Leading Manufacturer of bge 1.5 sew eurodrive rectifier, sew brake rectifier, 400 v brake rectifier, sew eurodrive bge 1.5 rectifier 825 385 4 for rectifying, capacity: 150-500vac, solid state brake rectifier and 500 v brake rectifier from Ahmedabad.",
-      "items": [
-         {
-            "name":"Bge 1.5 Sew Eurodrive Rectifier"
-         },
-         {
-            "name":"Sew Brake Rectifier"
-         },
-         {
-            "name":"400 V Brake Rectifier"
-         },
-         {
-            "name":"Sew Eurodrive Bge 1.5 Rectifier 825 385 4 For Rectifying, Capacity: 150-500VAC"
-         }
-      ]
-    },
-    {
-      "category": "Batching Plant Spare Parts",
-      "description":"Our product range includes a wide range of concrete end hose, pumping cylinder for schwing and putz and aquarius pump, batching plant memron keypad, batching plant hanger bearing, concrete pump pipe clamp and cement feeding blower.",
-      "items": [
-         {
-            "name":"Concrete End Hose"
-         },
-         {
-            "name":"Pumping Cylinder For Schwing And Putz And Aquarius Pump"
-         },
-         {
-            "name":"Batching Plant Memron Keypad"
-         },
-         {
-            "name":"Batching Plant Hanger Bearing"
-         }
-      ]
-    },
-    {
-      "category": "Concrete Batching Plant",
-      "description":"Prominent & Leading Manufacturer from Ahmedabad, we offer batching plant spare parts, concrete batching plant spares, batching plant sensor and concrete batching plant.",
-      "items": [
-         {
-            "name":"Batching Plant Spare Parts"
-         },
-         {
-            "name":"Concrete Batching Plant Spares"
-         },
-         {
-            "name":"Batching Plant Sensor"
-         },
-         {
-            "name":"Concrete Batching Plant"
-         }
-      ]
-    },
-    {
-      "category": "Weintek Hmi",
-      "description":"Leading Manufacturer of hmi touch panel, weintek mt8071ip hmi, mt8071ie weintek hmi, weintek mt8071ie hmi and mt8071ip hmi from Ahmedabad.",
-      "items": [
-         {
-            "name":"HMI Touch Panel"
-         },
-         {
-            "name":"Weintek Mt8071Ip Hmi"
-         },
-         {
-            "name":"Mt8071Ie Weintek Hmi"
-         },
-         {
-            "name":"Weintek Mt8071Ie Hmi"
-         }
-      ]
-    },
-    {
-      "category": "Cement Silo",
-      "description":"Our product range includes a wide range of cement silo dust collector filter, cement silo filters, cement storage silo, cement bulker unloading system and cement feeding air blowers.",
-      "items": [
-         {
-            "name":"Cement Silo Dust Collector Filter"
-         },
-         {
-            "name":"Cement Silo Filters"
-         },
-         {
-            "name":"Cement Storage Silo"
-         },
-         {
-            "name":"Cement Bulker Unloading System"
-         }
-      ]
-    },
-    {
-      "category": "Siemens",
-      "description":"We are a leading Manufacturer of 6es7 9720ca230xa0 siemens plc programming cable, industrial siemens plc and 6gk1571 0ba00 0aa0 siemens from Ahmedabad, India.",
-      "items": [
-         {
-            "name":"6Es7 9720Ca230Xa0 Siemens Plc Programming Cable"
-         },
-         {
-            "name":"Industrial Siemens PLC"
-         },
-         {
-            "name":"6gk1571 0ba00 0aa0 Siemens"
-         },
-         {
-            "name":"Concrete Batching Plant"
-         }
-      ]
-    },
-    {
-      "category": "HMI Touch Panel",
-      "description":"Providing you the best range of b&r 4ppc70.0702-20b hmi, maxmech hmi . and esa 7 inch sc107a0111 with effective & timely delivery.",
-      "items": [
-         {
-            "name":"B&R 4PPC70.0702-20B HMI"
-         },
-         {
-            "name":"Maxmech HMI ."
-         },
-         {
-            "name":"ESA 7 Inch SC107A0111"
-         }
-      ]
-    },
-    {
-      "category": "Delta Ac Servo Drive",
-      "description":"Prominent & Leading Manufacturer from Ahmedabad, we offer delta asda-b2/a2 ab servo driver programming cable and asda-b2 ab for delta servo motor driver programming.",
-      "items": [
-         {
-            "name":"Delta Asda-B2/A2 Ab Servo Driver Programming Cable"
-         },
-         {
-            "name":"Asda-B2 Ab For Delta Servo Motor Driver Programming"
-         }
-      ]
-    },
-    {
-      "category": "Mitsubishi Plc",
-      "description":"Prominent & Leading Manufacturer from Ahmedabad, we offer delta hmi & plc usb programming cable uc-prg020 12a programming cable and usb-sc09-fx fx-usb-aw for mitsubishi fx fx1s fx1n.",
-      "items": [
-         {
-            "name":"Delta HMI & PLC USB Programming Cable UC-PRG020 12A Programming Cable"
-         },
-         {
-            "name":"USB-SC09-FX FX-USB-AW for Mitsubishi FX FX1S FX1N"
-         }
-      ]
-    },
-    {
-      "category": "Cement Feeding System",
-      "description":"Pioneers in the industry, we offer ss cement feeding machine and cement feeding machine from India.",
-      "items": [
-         {
-            "name":"SS Cement Feeding Machine"
-         },
-         {
-            "name":"Cement Feeding Machine"
-         }
-      ]
-    },
-    {
-      "category": "Face Recognition System",
-      "description":"Offering you a complete choice of products which include proface ca3 usbsb 01.",
-      "items": [
-         {
-            "name":"Proface Ca3 Usbsb 01"
-         }
-      ]
-    },
-    {
-      "category": "Batching Plant Spares",
-      "description":"Prominent & Leading Manufacturer from Ahmedabad, we offer cement silo dust collector and construction machinery spare parts.",
-      "items": [
-         {
-            "name":"Cement Silo Dust Collector"
-         }
-      ]
-    },
-    {
-      "category": "Ferrule Fittings",
-      "description":"Pioneers in the industry, we offer usb-ac30r2-9ss from India.",
-      "items": [
-         {
-            "name":"USB-AC30R2-9SS"
-         }
-      ]
-    },
-    {
-      "category": "Fuji Hmi",
-      "description":"Leading Manufacturer of fuji hmi ts 1070 from Ahmedabad.",
-      "items": [
-         {
-            "name":"Fuji Hmi Ts 1070"
-         }
-      ]
-    },
-    {
-      "category": "Data Cable",
-      "description":"Leading Manufacturer of ca3 usb cb01 from Ahmedabad.",
-      "items": [
-         {
-            "name":"Ca3 Usb Cb01"
-         }
-      ]
-    },
-    {
-      "category": "Digital Weighing Indicator",
-      "description":"Manufacturer of a wide range of products which include weighing indicator (omron make).",
-      "items": [
-         {
-            "name":"Weighing Indicator (Omron Make)"
-         }
-      ]
-    },
-    {
-      "category": "Skin Care Medicines",
-      "description":"Offering you a complete choice of products which include 6ed1057-1aa01-0ba0.",
-      "items": [
-         {
-            "name":"6ED1057-1AA01-0BA0"
-         }
-      ]
-    },
-    {
-      "category": "Fiber Optic Cable",
-      "description":"We are a leading Manufacturer of qc32r2 cable from Ahmedabad, India.",
-      "items": [
-         {
-            "name":"QC32R2 Cable"
-         }
-      ]
-    },
-    {
-      "category": "Concrete Pump",
-      "description":"Prominent & Leading Manufacturer from Ahmedabad, we offer concrete pump pipe line.",
-      "items": [
-         {
-            "name":"Concrete Pump Pipe Line"
-         }
-      ]
-    },
-    {
-      "category": "Load Cell",
-      "description":"Prominent & Leading Manufacturer from Ahmedabad, we offer load cell 22.5kg, 45 kg, 90 kg.",
-      "items": [
-         {
-            "name":"Load Cell 22.5kg, 45 Kg, 90 Kg"
-         }
-      ]
-    },
-    {
-      "category": "Beam Load Cell",
-      "description":"We are a leading Manufacturer of beam load cell from Ahmedabad, India.",
-      "items": [
-         {
-            "name":"Beam Load Cell"
-         }
-      ]
-    },
-    {
-      "category": "Ifm Sensor",
-      "description":"Prominent & Leading Manufacturer from Ahmedabad, we offer ifm ib5124 sensor.",
-      "items": [
-         {
-            "name":"Ifm Ib5124 Sensor"
-         }
-      ]
-    }
-  ]
+   "products": [
+      {
+         "category": "Programming Cables",
+         "description": "Our product range includes a wide range of siemens programming cable, usb sc09 fx mitsubishi plc programming cable, siemens logo plc programming cable, usb 1761 cbl pm02 plc programming cable, usb qc30r2 programming cable and usbacab230 programming cable.",
+         "items": [
+            {
+               "name": "Siemens Programming Cable",
+               "price": "Rs 2,450",
+               "minimumOrderQuantity": 1,
+               "cableType": "USB",
+               "color": "Black",
+               "material": "Copper",
+               "usageApplication": "PLC",
+               "packagingType": "Box",
+               "countryOfOrigin": "Made in India",
+               "image": [
+                  "../images/SiemensProgrammingCable1.jpeg",
+                  "../images/SiemensProgrammingCable2.jpeg"
+               ],
+               "description": "With sincerity and hard work of our professionals, we have carved a niche for ourselves in this domain by providing a premium quality of Programming Cable."
+            },
+            {
+               "name": "Usb Sc09 Fx Mitsubishi Plc Programming Cable",
+               "price": "Rs 1,650",
+               "color": "Black",
+               "material": "PVC",
+               "cableType": "USB",
+               "usageApplication": "PROGRAMMING",
+               "length": "2 M",
+               "inputType": "Display Port Male",
+               "packagingType": "Box",
+               "countryOfOrigin": "Made in India",
+               "image": [
+                  "../images/usb-sc09-fx-mitsubishi-plc-programming-cable-1.jpg",
+                  "../images/usb-sc09-fx-mitsubishi-plc-programming-cable-3.webp",
+                  "../images/usb-sc09-fx-mitsubishi-plc-programming-cable-2.webp"
+               ],
+               "description": "WE ARE TRADERS IN SIEMENS PLC  PROGRAMMING CABLE , SIEMENS PLC AND ANALOGE MODULE , EXPANSION MODULE INPUT MODULE OUTPUT MODULE AND OTHER ACCESSORIES IN PAN INDIA LOCATION"
+            },
+            {
+               "name": "Siemens Logo Plc Programming Cable",
+               "price": "Rs 1,650",
+               "color": "Black",
+               "material": "PVC",
+               "cableType": "USB",
+               "usageApplication": "PROGRAMMING",
+               "length": "2 M",
+               "inputType": "Display Port Male",
+               "countryOfOrigin": "Made in India",
+               "image": [
+                  "../images/siemens-logo-plc-programming-cable-1.webp",
+                  "../images/siemens-logo-plc-programming-cable-2.webp",
+                  "../images/siemens-logo-plc-programming-cable-3.webp"
+               ],
+               "description": "WE ARE TRADERS IN SIEMENS PLC  PROGRAMMING CABLE , SIEMENS PLC AND ANALOGE MODULE , EXPANSION MODULE INPUT MODULE OUTPUT MODULE AND OTHER ACCESSORIES IN PAN INDIA LOCATION"
+            },
+            {
+               "name": "Usb 1761 Cbl Pm02 Plc Programming Cable",
+               "price": "Rs 1,650",
+               "color": "Black",
+               "material": "PVC",
+               "cableType": "USB",
+               "usageApplication": "PROGRAMMING",
+               "length": "2 M",
+               "inputType": "Display Port Male",
+               "modelNameNumber": "Usb 1761 Cbl Pm02",
+               "countryOfOrigin": "Made in India",
+               "image": [
+                  "../images/usb-1761-cbl-pm02-plc-programming-cable-1.webp",
+                  "../images/usb-1761-cbl-pm02-plc-programming-cable-2.webp",
+                  "../images/usb-1761-cbl-pm02-plc-programming-cable-3.webp"
+               ],
+               "description": "WE ARE TRADERS IN SIEMENS PLC  PROGRAMMING CABLE , SIEMENS PLC AND ANALOGE MODULE , EXPANSION MODULE INPUT MODULE OUTPUT MODULE AND OTHER ACCESSORIES IN PAN INDIA LOCATION"
+            }
+         ]
+      },
+      {
+         "category": "Siemens Plc",
+         "description": "Providing you the best range of siemens 6es7972 0cb20 0xa0, usb- fx 232 cab1 programming cable, siemens logo programming cable, 7mh4930 0aa01 siemense plc and siwarex module s7 200 with effective & timely delivery.",
+         "items": [
+            {
+               "name": "Siemens 6es7972 0cb20 0xa0",
+               "price": "Rs 4250 / Piece",
+               "color": "Black",
+               "material": "PVC",
+               "cableType": "USB",
+               "modelNameNumber": "Siemens 6es7972 0cb20 0xa0",
+               "usageApplication": "Programming",
+               "length": "5 M",
+               "inputType": "Display Port Male",
+               "minimumOrderQuantity": "1 Piece",
+               "description": "Established as a Proprietor firm in the year 2011, we “JIA ENTERPRISE” are a leading Manufacturer of a wide range of Brake Coil, Rubber Shut, Siemens MCCB, etc.",
+               "image": [
+                  "../images/siemens-6es7972-0cb20-0xa0-500x500-1.webp",
+                  "../images/siemens-6es7972-0cb20-0xa0-500x500-2.webp",
+                  "../images/siemens-6es7972-0cb20-0xa0-500x500-3.webp"
+               ]
+            },
+            {
+               "name": "USB- FX 232 CAB1 PROGRAMMING CABLE",
+               "price": "₹ 1650 / Piece",
+               "color": "Black",
+               "material": "PVC",
+               "cableType": "USB",
+               "usageApplication": "PROGRAMMING",
+               "length": "2 M",
+               "inputType": "Display Port Male",
+               "countryOfOrigin": "Made in India",
+               "minimumOrderQuantity": "1 Piece",
+               "description": "WE ARE TRADERS IN SIEMENS PLC PROGRAMMING CABLE , SIEMENS PLC AND ANALOGE MODULE , EXPANSION MODULE INPUT MODULE OUTPUT MODULE AND OTHER ACCESSORIES IN PAN INDIA LOCATION"
+            },
+            {
+               "name": "Siemens Logo Programming Cable",
+               "price": "₹ 1650 / Piece",
+               "cableType": "USB",
+               "color": "Black",
+               "material": "PVC",
+               "modelNameNumber": "logo cable",
+               "usageApplication": "logo plc",
+               "length": "2 mtr",
+               "voltage": "230",
+               "power": "230V",
+               "packagingType": "standard",
+               "quantityPerPack": "1 nos",
+               "minimumOrderQuantity": "1 Piece",
+               "description": "Established as a Proprietor firm in the year 2011, we “JIA ENTERPRISE” are a leading Manufacturer of a wide range of Brake Coil, Rubber Shut, Siemens MCCB, etc."
+            },
+            {
+               "name": "7mh4930 0aa01 SIEMENSE PLC",
+               "price": "₹ 33500 / Piece",
+               "mountingType": "Panel Mount",
+               "brand": "Siemens",
+               "outputType": "Analog",
+               "usageApplication": "Industrial",
+               "countryOfOrigin": "Made in India",
+               "packagingType": "Carton Box",
+               "voltage": "+24VDAC",
+               "description": "With sincerity and hard work of our professionals, we have carved a niche for ourselves in this domain by providing a premium quality of Programming Cable."
+            }
+         ]
+      },
+      {
+         "category": "Input Module",
+         "description": "Manufacturer of a wide range of products which include b&r x20-ai-1744-3 analog input module, x20 ai 1744, b&r x20 di 2377, x20aia744 load cell module and b & r x20do9322 base module.",
+         "items": [
+            {
+               "name": "B&R X20-AI-1744-3 Analog Input Module",
+               "price": "₹ 24000 / Piece",
+               "numberOfChannels": "16",
+               "brand": "B &R",
+               "usageApplication": "Industrial",
+               "modelNameNumber": "X20-AI-1744-3",
+               "countryOfOrigin": "Made in India",
+               "description": "Established in year 2020, DS AQUA ENGINEERING is the leading Manufacturer Trader of Programming Cable, Siemens Plc, Bulker Unloading System, Storage Silo more. The range of products offered by us is of premium quality that boasts of client's confidence. We consider passing each and every finished product through stringent product inspection processes, in order to ensure that deliveries made at our client's end, are absolutely flawless. Under the guidance of our mentor Gurdeep Yadav (CEO), we have been able to carve a unique niche in this domain."
+            },
+            {
+               "name": "X20 Ai 1744",
+               "price": "₹ 19000 / Piece",
+               "numberOfChannels": "16",
+               "brand": "B & R",
+               "usageApplication": "Industrial",
+               "modelNameNumber": "X20 Ai 1744",
+               "countryOfOrigin": "Made in India",
+               "description": "Established in year 2020, DS AQUA ENGINEERING is the leading Manufacturer Trader of Programming Cable, Siemens Plc, Bulker Unloading System, Storage Silo more. The range of products offered by us is of premium quality that boasts of client’s confidence. We consider passing each and every finished product through stringent product inspection processes, in order to ensure that deliveries made at our client’s end, are absolutely flawless. Under the guidance of our mentor Gurdeep Yadav (CEO), we have been able to carve a unique niche in this domain."
+            },
+            {
+               "name": "B&R X20 DI 2377",
+               "price": "₹ 11000 / Piece",
+               "numberOfChannels": "16",
+               "brand": "B & R",
+               "usageApplication": "Industrial",
+               "modelNameNumber": "B&R X20 DI 2377",
+               "countryOfOrigin": "Made in India",
+               "description": "Established in year 2020, DS AQUA ENGINEERING is the leading Manufacturer Trader of Programming Cable, Siemens Plc, Bulker Unloading System, Storage Silo more. The range of products offered by us is of premium quality that boasts of client's confidence. We consider passing each and every finished product through stringent product inspection processes, in order to ensure that deliveries made at our client's end, are absolutely flawless. Under the guidance of our mentor Gurdeep Yadav (CEO), we have been able to carve a unique niche in this domain."
+            },
+            {
+               "name": "X20AIA744 Load Cell Module",
+               "price": "₹ 28000 / Piece",
+               "numberOfChannels": "16",
+               "brand": "B & R",
+               "usageApplication": "Industrial",
+               "modelNameNumber": "X20AIA744",
+               "countryOfOrigin": "Made in India",
+               "description": "Established in year 2020, DS AQUA ENGINEERING is the leading Manufacturer Trader of Programming Cable, Siemens Plc, Bulker Unloading System, Storage Silo more. The range of products offered by us is of premium quality that boasts of client's confidence. We consider passing each and every finished product through stringent product inspection processes, in order to ensure that deliveries made at our client's end, are absolutely flawless. Under the guidance of our mentor Gurdeep Yadav (CEO), we have been able to carve a unique niche in this domain."
+            }
+         ]
+      },
+      {
+         "category": "Siemens Modules",
+         "items": [
+            {
+               "name": "Siemens PLC S7 300",
+               "price": "₹ 11500 / Piece",
+               "mountingType": "Panel Mount",
+               "brand": "Siemens",
+               "outputType": "Analog",
+               "usageApplication": "Industrial",
+               "countryOfOrigin": "Made in India",
+               "modelNo": "S7 300",
+               "packagingType": "Carton Box",
+               "description": "With sincerity and hard work of our professionals, we have carved a niche for ourselves in this domain by providing a premium quality of Programming Cable."
+            },
+            {
+               "name": "Siemens S7 200 Cn Plc Cable",
+               "price": "₹ 5500 / Piece",
+               "cableType": "Ethernet",
+               "color": "Blue",
+               "usageApplication": "PLC",
+               "inputType": "Display Port Male",
+               "packagingType": "Box",
+               "phase": "Single",
+               "countryOfOrigin": "Made in India",
+               "brand": "Siemens",
+               "description": "With sincerity and hard work of our professionals, we have carved a niche for ourselves in this domain by providing a premium quality of Programming Cable."
+            },
+            {
+               "name": "Plc Expansion Module 6es7 223 1bl22 0xb0",
+               "price": "₹ 15950 / Piece",
+               "brand": "Siemens",
+               "ioPoints": "16 Input-output",
+               "outputType": "Digital",
+               "usageApplication": "Industrial",
+               "numberOfInputs": "16*16",
+               "countryOfOrigin": "Made in India",
+               "description": "Established as a Proprietor firm in the year 2011, we “DS AQUA ENGINEERING” are a leading Manufacturer of a wide range of Brake Coil, Rubber Shut, Siemens MCCB, etc."
+            },
+            {
+               "name": "6gk1571 0ba00 0aa0 Siemens",
+               "price": "₹ 5500 / Piece",
+               "mountingType": "Panel Mount",
+               "brand": "Siemens",
+               "outputType": "Analog",
+               "usageApplication": "Industrial",
+               "countryOfOrigin": "Made in India",
+               "packagingType": "Box",
+               "description": "With sincerity and hard work of our professionals, we have carved a niche for ourselves in this domain by providing a premium quality of Programming Cable."
+            }
+         ]
+      },
+      {
+         "category": "Programmable Logic Controller",
+         "description": "Offering you a complete choice of products which include programming cable usb-ac30r2-9ss, usb-ac30r2-9ss mitsubishi plc cable, mitsubishi plc programing cable, usb-acab230 - delta plc cable, fx-usb-aw for mitsubishi fx1n/2n/fx3uc/fx3g series and delta hmi & plc usb programming cable uc-prg020 12a plc programming cable.",
+         "items": [
+            {
+               "name": "Programming cable USB-AC30R2-9SS",
+               "price": "₹ 2200 / Piece",
+               "cableType": "USB",
+               "color": "Yellow",
+               "length": "3 Mtr",
+               "application": "Programming",
+               "usedFor": "PLC",
+               "description": "With sincerity and hard work of our professionals, we have carved a niche for ourselves in this domain by providing a premium quality of Programming Cable."
+            },
+            {
+               "name": "USB-AC30R2-9SS Mitsubishi PLC Cable",
+               "price": "₹ 2650 / Piece",
+               "cableType": "USB",
+               "color": "Yellow",
+               "length": "3 Mtr",
+               "application": "Programming",
+               "usedFor": "PLC",
+               "description": "With sincerity and hard work of our professionals, we have carved a niche for ourselves in this domain by providing a premium quality of Programming Cable."
+            },
+            {
+               "name": "Mitsubishi Plc Programing Cable",
+               "price": "₹ 2550 / Piece",
+               "cableType": "USB",
+               "color": "Yellow",
+               "length": "3 Mtr",
+               "application": "Programming",
+               "usedFor": "PLC",
+               "description": "With sincerity and hard work of our professionals, we have carved a niche for ourselves in this domain by providing a premium quality of Programming Cable."
+            },
+            {
+               "name": "USB-ACAB230 - DELTA PLC Cable",
+               "price": "₹ 1650 / Piece",
+               "cableType": "USB",
+               "colour": "Yellow",
+               "length": "3 Mtr",
+               "application": "Programming",
+               "used": "PLC",
+               "description": "With sincerity and hard work of our professionals, we have carved a niche for ourselves in this domain by providing a premium quality of Programming Cable."
+            }
+         ]
+      },
+      {
+         "category": "Rectifier",
+         "description": "Leading Manufacturer of bge 1.5 sew eurodrive rectifier, sew brake rectifier, 400 v brake rectifier, sew eurodrive bge 1.5 rectifier 825 385 4 for rectifying, capacity: 150-500vac, solid state brake rectifier and 500 v brake rectifier from Ahmedabad.",
+         "items": [
+            {
+               "name": "Bge 1.5 Sew Eurodrive Rectifier",
+               "price": "₹ 4850 / Piece",
+               "rectifierType": "Full Wave",
+               "modelNameNumber": "Bge-1.5",
+               "brand": "sew",
+               "current": "440 volt",
+               "usageApplication": "Speed controller",
+               "countryOfOrigin": "Made in India",
+               "minimumOrderQuantity": "1 Piece",
+               "description": "Established as a Proprietor firm in the year 2011, we “DS AQUA ENGINEERING” are a leading Manufacturer of a wide range of Brake Coil, Rubber Shut, Siemens MCCB, etc."
+            },
+            {
+               "name": "Sew Brake Rectifier",
+               "price": "₹ 4950 / Piece",
+               "current": "400 V",
+               "rectifierType": "Full Wave",
+               "usageApplication": "Batching Plant",
+               "material": "Plastic",
+               "frequency": "50 Hz",
+               "packagingType": "Box",
+               "countryOfOrigin": "Made in India",
+               "type": "Brake Rectifier",
+               "description": "We are engaged in offering this product to our clients. Our range of all products is widely appreciated by our clients."
+            },
+            {
+               "name": "400 V Brake Rectifier",
+               "price": "₹ 4950 / Piece",
+               "current": "400 V",
+               "rectifierType": "Full Wave",
+               "usageApplication": "Batching Plant",
+               "material": "Plastic",
+               "frequency": "50 Hz",
+               "packagingType": "Box",
+               "countryOfOrigin": "Made in India",
+               "description": "We are engaged in offering this product to our clients. Our range of all products is widely appreciated by our clients."
+            },
+            {
+               "name": "Sew Eurodrive Bge 1.5 Rectifier 825 385 4 For Rectifying, Capacity: 150-500VAC",
+               "price": "₹ 6850 / Piece",
+               "modelNameNumber": "BGE 1.5",
+               "brand": "SEW",
+               "usageApplication": "BATCHING PLANT",
+               "weight": "200 GRM",
+               "size": "all",
+               "minimumOrderQuantity": "1 Piece",
+               "description": "Established as a Proprietor firm in the year 2011, we “DS AQUA ENGINEERING” are a leading Manufacturer of a wide range of Brake Coil, Rubber Shut, Siemens MCCB, etc."
+            }
+         ]
+      },
+      {
+         "category": "Batching Plant Spare Parts",
+         "description": "Our product range includes a wide range of concrete end hose, pumping cylinder for schwing and putz and aquarius pump, batching plant memron keypad, batching plant hanger bearing, concrete pump pipe clamp and cement feeding blower.",
+         "items": [
+            {
+               "name": "Concrete End Hose",
+               "price": "₹ 22000 / Piece",
+               "usageApplication": "Concrete Batching Plant",
+               "material": "Mild Steel",
+               "brandMake": "Jia",
+               "countryOfOrigin": "Made in India",
+               "description": "we “DS AQUA ENGINEERING” are a leading Manufacturer of a wide range of Brake Coil, Rubber Shut, Siemens MCCB, etc."
+            },
+            {
+               "name": "Pumping Cylinder For Schwing And Putz And Aquarius Pump",
+               "price": "₹ 42000 / Piece",
+               "usageApplication": "Batching Plant Spare Parts",
+               "material": "Mild Steel",
+               "description": "we “DS AQUA ENGINEERING” are a leading Manufacturer of a wide range of Brake Coil, Rubber Shut, Siemens MCCB, etc."
+            },
+            {
+               "name": "Batching Plant Memron Keypad",
+               "price": "₹ 4595 / Piece",
+               "partType": "Keyboard",
+               "material": "Plastic",
+               "usageApplication": "Batching Plant Spare Parts",
+               "iDealIn": "New Only",
+               "automationGrade": "Standard",
+               "countryOfOrigin": "Made in India",
+               "description": "we “DS AQUA ENGINEERING” are a leading Manufacturer of a wide range of Brake Coil, Rubber Shut, Siemens MCCB, etc."
+            },
+            {
+               "name": "Batching Plant Hanger Bearing",
+               "price": "₹ 6500 / Piece",
+               "material": "Mild Steel",
+               "usageApplication": "Batching Plant Spare Parts",
+               "brandMake": "WAM",
+               "countryOfOrigin": "Made in India",
+               "description": "we “DS AQUA ENGINEERING” are a leading Manufacturer of a wide range of Brake Coil, Rubber Shut, Siemens MCCB, etc."
+            }
+         ]
+      },
+      {
+         "category": "Concrete Batching Plant",
+         "description": "Prominent & Leading Manufacturer from Ahmedabad, we offer batching plant spare parts, concrete batching plant spares, batching plant sensor and concrete batching plant.",
+         "items": [
+            {
+               "name": "Batching Plant Spare Parts",
+               "price": "₹ 1550 / Piece",
+               "partType": "Proximity Sensor",
+               "material": "Plastic",
+               "partApplication": "Batching Mixer",
+               "usageApplication": "Batching Plant Spare Parts",
+               "iDealIn": "New Only",
+               "brandMake": "As Per Requirement",
+               "automationGrade": "Automatic",
+               "actuationType": "Electric",
+               "description": "we “DS AQUA ENGINEERING” are a leading Manufacturer of a wide range of Brake Coil, Rubber Shut, Siemens MCCB, etc."
+            },
+            {
+               "name": "Concrete Batching Plant Spares",
+               "price": "₹ 15000 / Piece",
+               "usageApplication": "Batching Plant",
+               "bodyMaterial": "Stainless Steel",
+               "countryOfOrigin": "Made in India",
+               "type": "Spare Parts",
+               "brand": "Jia",
+               "packagingType": "Carton Box",
+               "description": "Established as a Proprietor firm in the year 2011, we “DS AQUA ENGINEERING” are a leading Manufacturer of a wide range of Brake Coil, Rubber Shut, Siemens MCCB, etc."
+            },
+            {
+               "name": "Batching Plant Sensor",
+               "price": "₹ 990 / Piece",
+               "usageApplication": "Concrete Batching Plant",
+               "material": "Iron",
+               "brandMake": "Macons",
+               "countryOfOrigin": "Made in India",
+               "description": "We are engaged in offering this product to our clients. Our range of all products is widely appreciated by our clients."
+            },
+            {
+               "name": "Concrete Batching Plant",
+               "price": "₹ 100000 / Piece",
+               "capacity": "60 cum/hr",
+               "waterFeedingSystem": "Fully Automatic",
+               "frequency": "50 Hz",
+               "material": "Stainless Steel",
+               "usageApplication": "Concrete Batching",
+               "isItPortable": "Non Portable",
+               "countryOfOrigin": "Made in India",
+               "description": "Established as a Proprietor firm in the year 2011, we “DS AQUA ENGINEERING” are a leading Manufacturer of a wide range of Brake Coil, Rubber Shut, Siemens MCCB, etc."
+            }
+         ]
+      },
+      {
+         "category": "Weintek Hmi",
+         "description": "Leading Manufacturer of hmi touch panel, weintek mt8071ip hmi, mt8071ie weintek hmi, weintek mt8071ie hmi and mt8071ip hmi from Ahmedabad.",
+         "items": [
+            {
+               "name": "HMI Touch Panel",
+               "price": "₹ 14500 / Piece",
+               "mountingType": "Panel Mount",
+               "brand": "HMI",
+               "phase": "Single Phase",
+               "countryOfOrigin": "Made in India",
+               "packagingType": "Box",
+               "productType": "HMI Touch Panel",
+               "minimumOrderQuantity": "1 Piece",
+               "description": "With sincerity and hard work of our professionals, we have carved a niche for ourselves in this domain by providing a premium quality of Programming Cable."
+            },
+            {
+               "name": "Weintek Mt8071Ip Hmi",
+               "price": "₹ 14500 / Piece",
+               "mountingType": "Wall Mounted",
+               "displaySize": "9 inch",
+               "phase": "Single Phase",
+               "resolution": "1024 x 768 Pixels",
+               "controlType": "Touch Screen",
+               "displayColors": "64k",
+               "packagingType": "Box",
+               "minimumOrderQuantity": "1 Piece",
+               "description": "With sincerity and hard work of our professionals, we have carved a niche for ourselves in this domain by providing a premium quality of Programming Cable."
+            },
+            {
+               "name": "Mt8071Ie Weintek Hmi",
+               "price": "₹ 14500 / Piece",
+               "mountingType": "Wall Mounted",
+               "displaySize": "7 inch",
+               "phase": "Single Phase",
+               "resolution": "1024 x 768 Pixels",
+               "displayColors": "64k",
+               "packagingType": "Box",
+               "minimumOrderQuantity": "1 Piece",
+               "description": "With sincerity and hard work of our professionals, we have carved a niche for ourselves in this domain by providing a premium quality of Programming Cable."
+            },
+            {
+               "name": "Weintek Mt8071Ie Hmi",
+               "price": "₹ 14500 / Piece",
+               "mountingType": "Wall Mounted",
+               "displaySize": "7 inch",
+               "phase": "Single Phase",
+               "resolution": "800 x 480 Pixels",
+               "controlType": "Touch Screen",
+               "displayColors": "64k",
+               "packagingType": "Box",
+               "minimumOrderQuantity": "1 Piece",
+               "description": "With sincerity and hard work of our professionals, we have carved a niche for ourselves in this domain by providing a premium quality of Programming Cable."
+            }
+         ]
+      },
+      {
+         "category": "Cement Silo",
+         "description": "Our product range includes a wide range of cement silo dust collector filter, cement silo filters, cement storage silo, cement bulker unloading system and cement feeding air blowers.",
+         "items": [
+            {
+               "name": "Cement Silo Dust Collector Filter",
+               "price": "₹ 59000 / Piece",
+               "material": "Stainless Steel",
+               "usageApplication": "CONSTRUCTION",
+               "shape": "vertical",
+               "design": "vertical",
+               "weight": "300 KG",
+               "power": "440 AC V",
+               "color": "grey",
+               "automationGrade": "Manual",
+               "iDealIn": "New Only",
+               "minimumOrderQuantity": "1 Piece",
+               "description": "Established as a Proprietor firm in the year 2011, we “DS AQUA ENGINEERING” are a leading Manufacturer of a wide range of Brake Coil, Rubber Shut, Siemens MCCB, etc."
+            },
+            {
+               "name": "Cement Silo Filters",
+               "price": "₹ 65000 / Piece",
+               "automationGrade": "Fully Automatic",
+               "weight": "300 KG",
+               "usageApplication": "construction",
+               "power": "440 ac",
+               "countryOfOrigin": "Made in India",
+               "minimumOrderQuantity": "1 Piece",
+               "description": "Established as a Proprietor firm in the year 2011, we “DS AQUA ENGINEERING” are a leading Manufacturer of a wide range of Brake Coil, Rubber Shut, Siemens MCCB, etc."
+            },
+            {
+               "name": "Cement Storage Silo",
+               "price": "₹ 500000 / Piece",
+               "sizeDimension": "3250 MM",
+               "capacity": "100 tonne",
+               "automationGrade": "Manual",
+               "weight": "4-5 tonne",
+               "usageApplication": "Construction",
+               "countryOfOrigin": "Made in India",
+               "minimumOrderQuantity": "1 Piece",
+               "description": "Established as a Proprietor firm in the year 2011, we “DS AQUA ENGINEERING” are a leading Manufacturer of a wide range of Brake Coil, Rubber Shut, Siemens MCCB, etc."
+            },
+            {
+               "name": "Cement Bulker Unloading System",
+               "price": "₹ 279550 / Piece",
+               "maximumLiftingHeight": "0-20 ft",
+               "powerSupply": "440V",
+               "liftingCapacity": "20-30 Tons, 30-40 Tons",
+               "material": "MS HARD",
+               "type": "Portable",
+               "warranty": "6 months",
+               "iDealIn": "New and Second Hand",
+               "afterSalesServiceAvailable": "Yes",
+               "hz": "50",
+               "countryOfOrigin": "Made in India",
+               "minimumOrderQuantity": "1 Piece",
+               "description": "Established as a Proprietor firm in the year 2011, we “DS AQUA ENGINEERING” are a leading Manufacturer of a wide range of Brake Coil, Rubber Shut, Siemens MCCB, etc."
+            }
+         ]
+      },
+      {
+         "category": "Siemens",
+         "description": "We are a leading Manufacturer of 6es7 9720ca230xa0 siemens plc programming cable, industrial siemens plc and 6gk1571 0ba00 0aa0 siemens from Ahmedabad, India.",
+         "items": [
+            {
+               "name": "6Es7 9720Ca230Xa0 Siemens Plc Programming Cable",
+               "price": "₹ 4550 / Piece",
+               "cableType": "USB",
+               "color": "Black",
+               "material": "Copper",
+               "packagingType": "Box",
+               "phase": "Single",
+               "countryOfOrigin": "Made in India",
+               "minimumOrderQuantity": "1 Piece",
+               "description": "With sincerity and hard work of our professionals, we have carved a niche for ourselves in this domain by providing a premium quality of Programming Cable."
+            },
+            {
+               "name": "Industrial Siemens PLC",
+               "price": "₹ 11500 / Piece",
+               "mountingType": "Panel Mount",
+               "brand": "Siemens",
+               "outputType": "Analog",
+               "usageApplication": "Industrial",
+               "countryOfOrigin": "Made in India",
+               "packagingType": "Box",
+               "description": "With sincerity and hard work of our professionals, we have carved a niche for ourselves in this domain by providing a premium quality of Programming Cable."
+            },
+            {
+               "name": "6gk1571 0ba00 0aa0 Siemens",
+               "price": "₹ 5500 / Piece",
+               "mountingType": "Panel Mount",
+               "brand": "Siemens",
+               "outputType": "Analog",
+               "usageApplication": "Industrial",
+               "countryOfOrigin": "Made in India",
+               "frequency": "50 Hz",
+               "packagingType": "Carton Box",
+               "description": "With sincerity and hard work of our professionals, we have carved a niche for ourselves in this domain by providing a premium quality of Programming Cable."
+            }
+         ]
+      },
+      {
+         "category": "HMI Touch Panel",
+         "description": "Providing you the best range of b&r 4ppc70.0702-20b hmi, maxmech hmi . and esa 7 inch sc107a0111 with effective & timely delivery.",
+         "items": [
+            {
+               "name": "B&R 4PPC70.0702-20B HMI",
+               "price": "₹ 95000 / Piece",
+               "mountingType": "Panel Mount",
+               "brand": "B & R",
+               "modelNameNumber": "4PPC70.0702-20B",
+               "displaySize": "7 Inch",
+               "usageApplication": "Industrial",
+               "countryOfOrigin": "Made in India",
+               "description": "Established in year 2020, DS AQUA ENGINEERING is the leading Manufacturer Trader of Programming Cable, Siemens Plc, Bulker Unloading System, Storage Silo more. The range of products offered by us is of premium quality that boasts of client’s confidence. We consider passing each and every finished product through stringent product inspection processes, in order to ensure that deliveries made at our client’s end, are absolutely flawless. Under the guidance of our mentor Gurdeep Yadav (CEO), we have been able to carve a unique niche in this domain."
+            },
+            {
+               "name": "Maxmech HMI .",
+               "price": "₹ 95000 / Piece",
+               "mountingType": "Panel Mount",
+               "brand": "Maxmech",
+               "modelNameNumber": "Maxmech",
+               "displaySize": "7 Inch",
+               "usageApplication": "Automation",
+               "countryOfOrigin": "Made in India",
+               "description": "Established in year 2020, DS AQUA ENGINEERING is the leading Manufacturer Trader of Programming Cable, Siemens Plc, Bulker Unloading System, Storage Silo more. The range of products offered by us is of premium quality that boasts of client’s confidence. We consider passing each and every finished product through stringent product inspection processes, in order to ensure that deliveries made at our client’s end, are absolutely flawless. Under the guidance of our mentor Gurdeep Yadav (CEO), we have been able to carve a unique niche in this domain."
+            },
+            {
+               "name": "ESA 7 Inch SC107A0111",
+               "price": "₹ 45000 / Piece",
+               "mountingType": "Panel Mount",
+               "brand": "ESA",
+               "modelNameNumber": "SC107A0111",
+               "displaySize": "7 Inch",
+               "usageApplication": "Industrial",
+               "description": "Established in year 2020, DS AQUA ENGINEERING is the leading Manufacturer Trader of Programming Cable, Siemens Plc, Bulker Unloading System, Storage Silo more. The range of products offered by us is of premium quality that boasts of client’s confidence. We consider passing each and every finished product through stringent product inspection processes, in order to ensure that deliveries made at our client’s end, are absolutely flawless. Under the guidance of our mentor Gurdeep Yadav (CEO), we have been able to carve a unique niche in this domain."
+            }
+         ]
+      },
+      {
+         "category": "Delta Ac Servo Drive",
+         "description": "Prominent & Leading Manufacturer from Ahmedabad, we offer delta asda-b2/a2 ab servo driver programming cable and asda-b2 ab for delta servo motor driver programming.",
+         "items": [
+            {
+               "name": "Delta Asda-B2/A2 Ab Servo Driver Programming Cable",
+               "price": "₹ 1650 / Piece",
+               "type": "USB",
+               "coated": "PVC",
+               "length": "3 MTR",
+               "used": "Drive",
+               "colour": "Yellow",
+               "minimumOrderQuantity": "1 Piece",
+               "description": "With sincerity and hard work of our professionals, we have carved a niche for ourselves in this domain by providing a premium quality of Programming Cable."
+            },
+            {
+               "name": "Asda-B2 Ab For Delta Servo Motor Driver Programming",
+               "price": "₹ 1650 / Piece",
+               "colour": "Yellow",
+               "length": "3 Mtr",
+               "coated": "PVC",
+               "type": "USB",
+               "application": "Drive",
+               "minimumOrderQuantity": "1 Piece",
+               "description": "With sincerity and hard work of our professionals, we have carved a niche for ourselves in this domain by providing a premium quality of Programming Cable."
+            }
+         ]
+      },
+      {
+         "category": "Mitsubishi Plc",
+         "description": "Prominent & Leading Manufacturer from Ahmedabad, we offer delta hmi & plc usb programming cable uc-prg020 12a programming cable and usb-sc09-fx fx-usb-aw for mitsubishi fx fx1s fx1n.",
+         "items": [
+            {
+               "name": "Delta HMI & PLC USB Programming Cable UC-PRG020 12A Programming Cable",
+               "price": "₹ 1650 / Piece",
+               "cableType": "USB",
+               "application": "Programming",
+               "usedFor": "PLC/HMI",
+               "color": "Yellow",
+               "length": "3 Mtr",
+               "description": "With sincerity and hard work of our professionals, we have carved a niche for ourselves in this domain by providing a premium quality of Programming Cable."
+            },
+            {
+               "name": "USB-SC09-FX FX-USB-AW for Mitsubishi FX FX1S FX1N",
+               "price": "₹ 1650 / Piece",
+               "cableType": "USB",
+               "color": "Yellow",
+               "material": "PVC",
+               "usageApplication": "PLC Programming",
+               "length": "3 Mtr",
+               "warranty": "6 Month",
+               "description": "With sincerity and hard work of our professionals, we have carved a niche for ourselves in this domain by providing a premium quality of Programming Cable."
+            }
+         ]
+      },
+      {
+         "category": "Cement Feeding System",
+         "description": "Pioneers in the industry, we offer ss cement feeding machine and cement feeding machine from India.",
+         "items": [
+            {
+               "name": "SS Cement Feeding Machine",
+               "price": "₹ 279550 / Piece",
+               "capacity": "50 Ton",
+               "automationGrade": "Fully Automatic",
+               "usageApplication": "Cement Feeding",
+               "power": "240 V",
+               "material": "SS",
+               "countryOfOrigin": "Made in India",
+               "description": "We are engaged in offering this product to our clients. Our range of all products is widely appreciated by our clients."
+            },
+            {
+               "name": "Cement Feeding Machine",
+               "price": "₹ 279550 / Piece",
+               "capacity": "40 Ton",
+               "automationGrade": "Fully Automatic",
+               "usageApplication": "Cement Feeding",
+               "surfacePolishing": "Polished",
+               "material": "Stainless Steel",
+               "countryOfOrigin": "Made in India",
+               "description": "We are engaged in offering this product to our clients. Our range of all products is widely appreciated by our clients."
+            }
+         ]
+      },
+      {
+         "category": "Face Recognition System",
+         "description": "Offering you a complete choice of products which include proface ca3 usbsb 01.",
+         "items": [
+            {
+               "name": "Proface Ca3 Usbsb 01",
+               "price": "₹ 5500 / Piece",
+               "cableType": "USB",
+               "color": "Yellow",
+               "material": "PVC",
+               "usageApplication": "PLC Programming",
+               "length": "3 Mtr",
+               "warranty": "6 Month",
+               "coating": "PVC",
+               "description": "With sincerity and hard work of our professionals, we have carved a niche for ourselves in this domain by providing a premium quality of Programming Cable."
+            }
+         ]
+      },
+      {
+         "category": "Batching Plant Spares",
+         "description": "Prominent & Leading Manufacturer from Ahmedabad, we offer cement silo dust collector and construction machinery spare parts.",
+         "items": [
+            {
+               "name": "Concrete Batching Plant Spares",
+               "price": "₹ 990 / Piece",
+               "partType": "Mixing Arm",
+               "compatibleBrand": "Sicoma, Macons",
+               "compatibleModelCapacity": "Not Applicable",
+               "material": "High Chrome Steel",
+               "partApplication": "Batching Mixer",
+               "actuationType": "Manual",
+               "description": "We are engaged in offering this product to our clients. Our range of all products is widely appreciated by our clients."
+            },
+            {
+               "name": "Cement Silo Dust Collector",
+               "price": "₹ 48000 / Piece",
+               "typeOfDustCollector": "Cartridge Dust Collectors",
+               "material": "Stainless Steel",
+               "automationGrade": "Fully Automatic",
+               "usageApplication": "Cement Plants",
+               "numberOfBags": "14",
+               "dustRemovalEfficiency": "90%",
+               "motorSpeed": "1400 RPM",
+               "description": "we “DS AQUA ENGINEERING” are a leading Manufacturer of a wide range of Brake Coil, Rubber Shut, Siemens MCCB, etc."
+            }
+         ]
+      },
+      {
+         "category": "Ferrule Fittings",
+         "description": "Pioneers in the industry, we offer usb-ac30r2-9ss from India.",
+         "items": [
+            {
+               "name": "USB-AC30R2-9SS",
+               "price": "₹ 2350 / Piece",
+               "cableType": "USB",
+               "color": "Yellow",
+               "material": "PVC",
+               "usageApplication": "Programming Used For PLC",
+               "length": "3 Mtr",
+               "warranty": "6 Month",
+               "coating": "PVC",
+               "description": "With sincerity and hard work of our professionals, we have carved a niche for ourselves in this domain by providing a premium quality of Programming Cable."
+            }
+         ]
+      },
+      {
+         "category": "Fuji Hmi",
+         "description": "Leading Manufacturer of fuji hmi ts 1070 from Ahmedabad.",
+         "items": [
+            {
+               "name": "Fuji Hmi Ts 1070",
+               "price": "₹ 16500 / Piece",
+               "mountingType": "Panel Mount",
+               "displaySize": "7 inch",
+               "phase": "Single Phase",
+               "resolution": "320 x 240 Pixels",
+               "controlType": "Touch Screen",
+               "displayColors": "64k",
+               "configurationSoftware": "TECHNOSOFT",
+               "countryOfOrigin": "Made in India",
+               "minimumOrderQuantity": "1 Piece",
+               "description": "Established as a Proprietor firm in the year 2011, we “DS AQUA ENGINEERING” are a leading Manufacturer of a wide range of Brake Coil, Rubber Shut, Siemens MCCB, etc."
+            }
+         ]
+      },
+      {
+         "category": "Data Cable",
+         "description": "Leading Manufacturer of ca3 usb cb01 from Ahmedabad.",
+         "items": [
+            {
+               "name": "Ca3 Usb Cb01",
+               "price": "₹ 5250 / Piece",
+               "cableType": "USB",
+               "color": "Yellow",
+               "material": "PVC",
+               "usageApplication": "PLC Programming",
+               "length": "3 Mtr",
+               "warranty": "6 Months",
+               "coating": "PVC",
+               "description": "With sincerity and hard work of our professionals, we have carved a niche for ourselves in this domain by providing a premium quality of Programming Cable."
+            }
+         ]
+      },
+      {
+         "category": "Digital Weighing Indicator",
+         "description": "Manufacturer of a wide range of products which include weighing indicator (omron make).",
+         "items": [
+            {
+               "name": "Weighing Indicator (Omron Make)",
+               "price": "₹ 21500 / Piece",
+               "modelNameNumber": "Ind320",
+               "weighingCapacity": "0.5 Kg",
+               "displayType": "Digital",
+               "brand": "Omron",
+               "usageApplication": "For Industrial Use",
+               "warranty": "6 Month",
+               "material": "Plastic",
+               "description": "Weighind Indicator (Omron Make) we are a leading Manufacturer of a wide range of Brake Coil, Rubber Shut, Siemens MCCB, etc."
+            }
+         ]
+      },
+      {
+         "category": "Skin Care Medicines",
+         "description": "Offering you a complete choice of products which include 6ed1057-1aa01-0ba0.",
+         "items": [
+            {
+               "name": "6ED1057-1AA01-0BA0",
+               "price": "₹ 1650 / Piece",
+               "cableType": "USB",
+               "color": "Yellow",
+               "material": "PVC",
+               "usageApplication": "PLC Programming",
+               "length": "3 Mtr",
+               "warranty": "6 Months",
+               "coating": "PVC",
+               "description": "With sincerity and hard work of our professionals, we have carved a niche for ourselves in this domain by providing a premium quality of Programming Cable."
+            }
+         ]
+      },
+      {
+         "category": "Fiber Optic Cable",
+         "description": "We are a leading Manufacturer of qc32r2 cable from Ahmedabad, India.",
+         "items": [
+            {
+               "name": "QC32R2 Cable",
+               "price": "₹ 1650 / Piece",
+               "cableType": "USB",
+               "color": "Yellow",
+               "material": "PVC",
+               "usageApplication": "PLC Programming",
+               "length": "3 Mtr",
+               "warranty": "6 Month",
+               "coating": "PVC",
+               "description": "With sincerity and hard work of our professionals, we have carved a niche for ourselves in this domain by providing a premium quality of Programming Cable."
+            }
+         ]
+      },
+      {
+         "category": "Concrete Pump",
+         "description": "Prominent & Leading Manufacturer from Ahmedabad, we offer concrete pump pipe line.",
+         "items": [
+            {
+               "name": "Concrete Pump Pipe Line",
+               "price": "₹ 5500 / Piece",
+               "size": "6 inch",
+               "length": "3m",
+               "usageApplication": "Concreate Pumps",
+               "surfaceFinish": "Finished Polished",
+               "singlePieceLength": "3 meter",
+               "shape": "Round",
+               "description": "Concrete Pump Pipe Line we are a leading Manufacturer of a wide range of Brake Coil, Rubber Shut, Siemens MCCB, etc."
+            }
+         ]
+      },
+      {
+         "category": "Load Cell",
+         "description": "Prominent & Leading Manufacturer from Ahmedabad, we offer load cell 22.5kg, 45 kg, 90 kg.",
+         "items": [
+            {
+               "name": "Load Cell 22.5kg, 45 Kg, 90 Kg",
+               "price": "₹ 8000 / Piece",
+               "loadCapacity": "100 kg",
+               "type": "Single Ended Shear Beam",
+               "brand": "ADI",
+               "material": "Stainless Steel",
+               "application": "Hopper Scales",
+               "description": "we “DS AQUA ENGINEERING” are a leading Manufacturer of a wide range of Brake Coil, Rubber Shut, Siemens MCCB, etc. Load Cell 22.5kg, 45 Kg, 90 Kg"
+            }
+         ]
+      },
+      {
+         "category": "Beam Load Cell",
+         "description": "We are a leading Manufacturer of beam load cell from Ahmedabad, India.",
+         "items": [
+            {
+               "name": "Beam Load Cell",
+               "price": "₹ 8000 / Piece",
+               "loadCapacity": "100 kg",
+               "type": "Single Ended Shear Beam",
+               "brand": "ADI",
+               "material": "Stainless Steel",
+               "application": "Automobiles Test Facilities",
+               "features": "Hermetically sealed, Current Calibrated",
+               "description": "we “DS AQUA ENGINEERING” are a leading Manufacturer of a wide range of Brake Coil, Rubber Shut, Siemens MCCB, etc. Load Cell 22.5kg, 45 Kg, 90 Kg"
+            }
+         ]
+      },
+      {
+         "category": "Ifm Sensor",
+         "description": "Prominent & Leading Manufacturer from Ahmedabad, we offer ifm ib5124 sensor.",
+         "items": [
+            {
+               "name": "Ifm Ib5124 Sensor",
+               "price": "₹ 1550 / Piece",
+               "countryOfOrigin": "Made in India",
+               "standard": "HIGH QUALITY",
+               "minimumOrderQuantity": "1 Piece",
+               "description": "Established as a Proprietor firm in the year 2011, we “DS AQUA ENGINEERING” are a leading Manufacturer of a wide range of Brake Coil, Rubber Shut, Siemens MCCB, etc."
+            }
+         ]
+      }
+   ]
 }

@@ -3,6 +3,7 @@ import emailjs from "@emailjs/browser";
 import { useState } from "react";
 
 export default function ProductModal({ isOpen, onClose, product }) {
+  console.log(product);
   const [mobile, setMobile] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -64,7 +65,7 @@ export default function ProductModal({ isOpen, onClose, product }) {
         {/* ✅ LEFT: Product Info */}
         <div className="md:w-1/2 border-b md:border-b-0 md:border-r border-gray-200 p-4 sm:p-6 flex flex-col items-center text-center">
           <img
-            src={product.details?.image?.[0] || "/placeholder.svg"}
+            src={product.image?.[0] || "/placeholder.svg"}
             alt={product.name}
             className="max-h-48 sm:max-h-56 object-contain mb-4"
           />

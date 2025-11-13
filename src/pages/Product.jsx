@@ -14,11 +14,14 @@ import Header from "../components/Header";
 import ImagePreviewModal from "../components/modal/ImagePreviewModal";
 import Navigation from "../components/Navigation";
 import ProductModal from "../components/modal/ProductModal";
-import { products } from "../assets/product.json";
+import productsData from "../assets/product.json";
 
 export default function Product() {
   const { category } = useParams();
   const location = useLocation();
+
+  // Get products array from JSON
+  const products = productsData.products;
 
   const currentCategory = products.find(
     (p) => p.category.toLowerCase().replace(/\s+/g, "-") === category
@@ -69,7 +72,7 @@ export default function Product() {
     setImageModalOpen(true);
   };
 
-  const handleCategoryClick = (prod) => {
+  const handleCategoryClick = () => {
     setSidebarOpen(false); // Close sidebar on mobile when category is clicked
   };
 
@@ -270,8 +273,7 @@ export default function Product() {
 
             <div className="space-y-8 md:space-y-12">
               {currentCategory?.items?.map((item, index) => {
-                const mainImage =
-                  hoveredImage[item.name] || item.details?.image?.[0];
+                const mainImage = hoveredImage[item.name] || item?.image?.[0];
 
                 return (
                   <div
@@ -292,7 +294,14 @@ export default function Product() {
                             <span className="text-xl md:text-2xl font-bold text-[#EA4E02]">
                               {item.price}
                             </span>
-                            <span className="text-gray-600">/ Piece</span>
+                            {item.minimumOrderQuantity && (
+                              <span className="text-gray-600">
+                                / {item.minimumOrderQuantity}{" "}
+                                {item.minimumOrderQuantity > 1
+                                  ? "Pieces"
+                                  : "Piece"}
+                              </span>
+                            )}
                           </div>
                         )}
                       </div>
@@ -307,7 +316,7 @@ export default function Product() {
 
                     <div className="grid md:grid-cols-2 gap-4 md:gap-6">
                       <div>
-                        {item.details?.image && (
+                        {item?.image && (
                           <>
                             {/* Main Image */}
                             <div
@@ -326,7 +335,7 @@ export default function Product() {
 
                             {/* Thumbnails */}
                             <div className="flex gap-2 overflow-x-auto pb-2">
-                              {item.details.image.map((img, idx) => (
+                              {item.image.map((img, idx) => (
                                 <img
                                   key={idx}
                                   src={img}
@@ -340,7 +349,7 @@ export default function Product() {
                                   onMouseLeave={() =>
                                     setHoveredImage((prev) => ({
                                       ...prev,
-                                      [item.name]: item.details.image[0],
+                                      [item.name]: item.image[0],
                                     }))
                                   }
                                   onClick={() => openImageModal(img)}
@@ -360,10 +369,12 @@ export default function Product() {
                         <div className="overflow-x-auto">
                           <table className="w-full text-xs md:text-sm border-collapse">
                             <tbody>
-                              {Object.entries(item.details || {}).map(
+                              {Object.entries(item || {}).map(
                                 ([key, value]) =>
                                   key !== "image" &&
-                                  key !== "description" && (
+                                  key !== "description" &&
+                                  key !== "name" &&
+                                  key !== "price" && (
                                     <tr key={key} className="border-b">
                                       <td className="py-2 pr-4 font-medium text-gray-700 capitalize">
                                         {key.replace(/([A-Z])/g, " $1")}
@@ -380,7 +391,7 @@ export default function Product() {
 
                     <div className="mt-4 md:mt-6">
                       <p className="text-gray-700 text-sm leading-relaxed">
-                        {item.details?.description}
+                        {item?.description}
                       </p>
                       <button
                         onClick={() => openModal(item)}
@@ -407,7 +418,7 @@ export default function Product() {
       {/* Image Preview Modal */}
       <ImagePreviewModal
         isOpen={imageModalOpen}
-        images={selectedProduct?.details?.image || []}
+        images={selectedProduct?.image || []}
         product={selectedProduct}
         onClose={() => setImageModalOpen(false)}
       />
