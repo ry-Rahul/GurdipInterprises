@@ -74,53 +74,27 @@ const Layout = () => {
           id="whatsapp-popup"
           onClick={openWhatsApp}
           className={`
-            fixed bottom-8 right-[70px]  /* position to left of logo */
-            bg-green-600 text-white shadow-xl rounded-lg 
-            px-4 py-3 text-sm font-semibold z-40 cursor-pointer
-            animate-slide-right flex items-center gap-0
-              ${
-                showButton
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-24 opacity-0"
-              }
-          duration-500
-          `}
+          fixed bottom-8 right-[94px] z-40
+          bg-green-600 text-white shadow-xl rounded-lg 
+          px-4 py-3 text-sm font-semibold cursor-pointer
+          flex items-center gap-2
+          animate-slide-from-left
+          transform transition-all duration-500 ease-out
+          ${
+            showButton
+              ? "translate-y-0 opacity-100"
+              : "translate-y-24 opacity-0"
+          }
+        `}
         >
           <span>Open WhatsApp</span>
+
+          {/* Optional: Add a small arrow pointing to the button */}
+          <div className="absolute -right-2 bottom-1/2 transform translate-y-1/2">
+            <div className="w-0 h-0 border-l-[8px] border-l-green-600 border-t-[6px] border-t-transparent border-b-[6px] border-b-transparent"></div>
+          </div>
         </div>
       )}
-
-      {/* Animations */}
-      <style>{`
-  /* WhatsApp logo slide */
-  .logo-show {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  .logo-hide {
-    transform: translateY(24px);
-    opacity: 0;
-  }
-
-  /* Smooth popup animation coming OUT of the button */
-  @keyframes bubble {
-    0% {
-      transform: scale(0.4) translateX(20px);
-      opacity: 0;
-    }
-    70% {
-      transform: scale(1.05) translateX(0);
-      opacity: 1;
-    }
-    100% {
-      transform: scale(1) translateX(0);
-      opacity: 1;
-    }
-  }
-  .animate-bubble {
-    animation: bubble 0.2s ease-out;
-  }
-`}</style>
     </div>
   );
 };
