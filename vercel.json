@@ -1,4 +1,13 @@
 {
+  "routes": [
+    {
+      "src": "/",
+      "headers": {
+        "User-Agent": "(.*facebookexternalhit|WhatsApp|Twitterbot|LinkedInBot|Slackbot|Discord|Google.*snippet)(.*)"
+      },
+      "dest": "/og.html"
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",
