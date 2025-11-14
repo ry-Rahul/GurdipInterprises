@@ -2,13 +2,13 @@
   "routes": [
     {
       "src": "/",
-      "userAgent": "WhatsApp|facebookexternalhit|Twitterbot|Slackbot|Discord|LinkedInBot|TelegramBot",
-      "dest": "/og.html"
+      "dest": "/og.html",
+      "userAgent": "facebookexternalhit|WhatsApp|Twitterbot|Slackbot|Discord|TelegramBot|LinkedInBot"
     }
   ],
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/((?!.*\\.(png|jpg|jpeg|gif|webp|svg)).*)",
       "destination": "/index.html"
     }
   ]
