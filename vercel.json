@@ -1,14 +1,38 @@
 {
-  "routes": [
+  "headers": [
     {
-      "src": "/",
-      "dest": "/og.html",
-      "userAgent": "facebookexternalhit|WhatsApp|Twitterbot|Slackbot|Discord|TelegramBot|LinkedInBot"
+      "source": "/",
+      "headers": [
+        {
+          "key": "og:title",
+          "value": "DS Aqua Engineering"
+        },
+        {
+          "key": "og:description",
+          "value": "Manufacturer of Concrete Pump Pipeline, Rubber Shut, Brake Coil and more."
+        },
+        {
+          "key": "og:image",
+          "value": "https://www.dsaquaengineering.com/preview.png"
+        },
+        {
+          "key": "og:image:width",
+          "value": "1200"
+        },
+        {
+          "key": "og:image:height",
+          "value": "630"
+        },
+        {
+          "key": "twitter:card",
+          "value": "summary_large_image"
+        }
+      ]
     }
   ],
   "rewrites": [
     {
-      "source": "/((?!.*\\.(png|jpg|jpeg|gif|webp|svg)).*)",
+      "source": "/(.*)",
       "destination": "/index.html"
     }
   ]
