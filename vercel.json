@@ -2,9 +2,7 @@
   "routes": [
     {
       "src": "/",
-      "headers": {
-        "User-Agent": "(.*facebookexternalhit|WhatsApp|Twitterbot|LinkedInBot|Slackbot|Discord|Google.*snippet)(.*)"
-      },
+      "userAgent": "WhatsApp|facebookexternalhit|Twitterbot|Slackbot|Discord|LinkedInBot|TelegramBot",
       "dest": "/og.html"
     }
   ],
