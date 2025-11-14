@@ -86,7 +86,20 @@ export default function ImagePreviewModal({
             <img
               src={images[currentIndex]}
               alt={`product-${currentIndex}`}
-              className="max-h-[70vh] max-w-full object-contain p-2 sm:p-4"
+              className="
+    w-auto
+    max-w-[80vw]        /* Mobile: small width */
+    max-h-[30vh]        /* Mobile: small height */
+    
+    sm:max-w-[50vw]     /* Tablet */
+    sm:max-h-[50vh]
+
+    lg:max-w-[50vw]     /* Desktop */
+    lg:max-h-[70vh]
+
+    object-contain
+    p-2 sm:p-4
+  "
             />
           )}
 
@@ -111,7 +124,7 @@ export default function ImagePreviewModal({
 
         {/* 🧾 RIGHT: Product Details */}
         <div className="md:w-1/3 bg-white p-4 sm:p-5 overflow-y-auto border-t md:border-t-0 md:border-l border-gray-200">
-          <h2 className="text-lg sm:text-xl font-bold mb-1 text-[#EA4E02] text-center md:text-left">
+          <h2 className="text-sm lg:text-lg font-bold mb-1 text-[#EA4E02] text-center md:text-left">
             {product.name}
           </h2>
 

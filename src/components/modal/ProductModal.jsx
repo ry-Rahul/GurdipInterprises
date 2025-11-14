@@ -3,7 +3,6 @@ import emailjs from "@emailjs/browser";
 import { useState } from "react";
 
 export default function ProductModal({ isOpen, onClose, product }) {
-  console.log(product);
   const [mobile, setMobile] = useState("");
   const [loading, setLoading] = useState(false);
 

@@ -80,6 +80,7 @@ export default function Product() {
       <Navigation />
 
       <div className="max-w-7xl mx-auto px-2 py-2">
+        {/* MOBILE CATEGORY BUTTON */}
         <div className="lg:hidden mb-2">
           <button
             onClick={() => setSidebarOpen(true)}
@@ -90,13 +91,14 @@ export default function Product() {
           </button>
         </div>
 
-        <div className="grid lg:grid-cols-[250px_1fr] gap-2">
-          <aside className="hidden lg:block bg-[#2a2220] text-white rounded-lg p-2 sticky top-4 h-fit max-h-[calc(100vh-2rem)] overflow-y-auto">
-            <h3 className="text-lg font-bold mb-4 bg-[#FFA601] text-black px-2 py-1 rounded-md">
+        <div className="grid lg:grid-cols-[250px_1fr] gap-4">
+          {/* DESKTOP SIDEBAR */}
+          <aside className="hidden lg:block bg-[#2a2220] text-white rounded-lg p-3 sticky top-4 h-fit max-h-[calc(100vh-2rem)] overflow-y-auto">
+            <h3 className="text-lg font-bold mb-4 bg-[#FFA601] text-black px-3 py-1 rounded-md">
               Our Product Range
             </h3>
 
-            <ul className="space-y-1">
+            <ul className="space-y-2">
               {products.map((prod, index) => {
                 const isActive = prod.category === expandedCategory;
                 const isCurrent = prod.category === currentCategory?.category;
@@ -109,7 +111,7 @@ export default function Product() {
                     }`}
                   >
                     <div
-                      className={`flex items-center justify-between px-3 py-2 text-sm border-b-[0.5px] border-white transition-colors ${
+                      className={`flex items-center justify-between px-3 py-2 text-sm border-b border-white/20 transition-colors ${
                         isCurrent
                           ? "bg-[#FFA601] text-black font-semibold"
                           : "hover:bg-[#f5c842] hover:text-black"
@@ -158,16 +160,13 @@ export default function Product() {
             </ul>
           </aside>
 
+          {/* MOBILE SLIDER SIDEBAR */}
           <div
-            className={`
-              fixed inset-0 z-50 lg:hidden
-              transition-opacity duration-300
-              ${
-                sidebarOpen
-                  ? "opacity-100 pointer-events-auto"
-                  : "opacity-0 pointer-events-none"
-              }
-            `}
+            className={`fixed inset-0 z-50 lg:hidden transition-opacity duration-300 ${
+              sidebarOpen
+                ? "opacity-100 pointer-events-auto"
+                : "opacity-0 pointer-events-none"
+            }`}
           >
             <div
               className="absolute inset-0 bg-black/50"
@@ -209,7 +208,7 @@ export default function Product() {
                         }`}
                       >
                         <div
-                          className={`flex items-center justify-between px-3 py-3 text-sm border-b-[0.5px] border-white transition-colors ${
+                          className={`flex items-center justify-between px-3 py-3 text-sm border-b border-white/20 transition-colors ${
                             isCurrent
                               ? "bg-[#FFA601] text-black font-semibold"
                               : "hover:bg-[#f5c842] hover:text-black"
@@ -221,7 +220,6 @@ export default function Product() {
                                 isActive ? null : prod.category
                               )
                             }
-                            className="p-1"
                           >
                             {isActive ? (
                               <ChevronDown size={16} />
@@ -234,7 +232,7 @@ export default function Product() {
                             to={`/product/${prod.category
                               .toLowerCase()
                               .replace(/\s+/g, "-")}`}
-                            onClick={() => handleCategoryClick(prod)}
+                            onClick={() => handleCategoryClick()}
                             className="flex-1 ml-2"
                           >
                             {prod.category}
@@ -247,7 +245,7 @@ export default function Product() {
                               <li key={i}>
                                 <button
                                   onClick={() => handleScrollToItem(item.name)}
-                                  className="flex text-left w-full px-3 py-2 text-sm rounded items-center gap-2 hover:bg-[#FFE23A] hover:text-black transition-colors"
+                                  className="flex text-left w-full px-3 py-2 text-sm rounded items-center gap-2 hover:bg-[#FFE23A] hover:text-black"
                                 >
                                   <ChevronsRight className="w-4 h-4" />
                                   <span className="line-clamp-2">
@@ -266,17 +264,18 @@ export default function Product() {
             </aside>
           </div>
 
-          <section className="bg-white rounded-lg p-4 md:p-6 shadow-md overflow-hidden">
+          {/* ================= PRODUCT ITEMS SECTION ================= */}
+          <section className="bg-transparent rounded-lg">
             <div className="mb-6">
-              <h1 className="text-xl md:text-2xl font-bold text-[#EA4E02] mb-2">
+              <h1 className="text-xl md:text-2xl font-bold text-white mb-2">
                 {currentCategory?.category}
               </h1>
-              <p className="text-gray-700 text-sm">
+              <p className="text-gray-200 text-sm">
                 {currentCategory?.description}
               </p>
             </div>
 
-            <div className="space-y-8 md:space-y-12">
+            <div className="space-y-6 md:space-y-10">
               {currentCategory?.items?.map((item, index) => {
                 const mainImage = hoveredImage[item.name] || item?.image?.[0];
 
@@ -284,13 +283,26 @@ export default function Product() {
                   <div
                     key={index}
                     ref={(el) => (itemRefs.current[item.name] = el)}
-                    className="border-b border-gray-300 pb-8 md:pb-10 last:border-0 scroll-mt-20"
+                    className="
+                      scroll-mt-28
+                      bg-white 
+                      rounded-xl 
+                      border border-gray-200 
+                      shadow-sm 
+                      hover:shadow-md 
+                      transition-all 
+                      duration-300 
+                      p-4 md:p-6 
+                      mb-4
+                    "
                   >
-                    <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4 md:mb-6 gap-3">
+                    {/* HEADER SECTION */}
+                    <div className="flex flex-col md:flex-row md:justify-between mb-4 md:mb-6 gap-3">
                       <div>
-                        <h2 className="text-lg md:text-xl font-bold mb-1">
+                        <h2 className="text-lg md:text-xl font-bold mb-2 text-[#42210B]">
                           {item.name}
                         </h2>
+
                         {item.price && (
                           <div className="flex items-center flex-wrap gap-2">
                             <span className="text-sm text-gray-600">
@@ -310,16 +322,21 @@ export default function Product() {
                           </div>
                         )}
                       </div>
+
                       <button
                         onClick={() => openModal(item)}
-                        className="bg-red-700 hover:bg-red-800 text-white font-bold px-4 py-2 rounded-lg flex items-center justify-center gap-2 transition w-full md:w-auto"
+                        className="bg-red-700 hover:bg-red-800 text-white font-bold
+               px-4 py-2 rounded-lg flex items-center justify-center gap-2
+               transition w-full md:w-auto whitespace-nowrap self-start"
                       >
                         <Phone className="w-4 h-4" />
                         REQUEST CALLBACK
                       </button>
                     </div>
 
+                    {/* IMAGES + DETAILS GRID */}
                     <div className="grid md:grid-cols-2 gap-4 md:gap-6">
+                      {/* IMAGES SECTION */}
                       <div>
                         {item?.image && (
                           <>
@@ -337,7 +354,7 @@ export default function Product() {
                               />
                             </div>
 
-                            <div className="flex gap-2 overflow-x-auto pb-2">
+                            <div className="flex gap-2 overflow-x-auto pb-2 bg-gray-50 p-2 rounded-lg">
                               {item.image.map((img, idx) => (
                                 <img
                                   key={idx}
@@ -364,21 +381,26 @@ export default function Product() {
                         )}
                       </div>
 
+                      {/* DETAILS SECTION */}
                       <div>
                         <h3 className="font-bold mb-2 text-base md:text-lg">
                           Product Details:
                         </h3>
+
                         <div className="overflow-x-auto">
-                          <table className="w-full text-xs md:text-sm border-collapse">
+                          <table className="w-full text-xs md:text-sm border-collapse rounded-lg shadow-sm overflow-hidden">
                             <tbody>
-                              {Object.entries(item || {}).map(
+                              {Object.entries(item).map(
                                 ([key, value]) =>
                                   key !== "image" &&
                                   key !== "description" &&
                                   key !== "name" &&
                                   key !== "price" && (
-                                    <tr key={key} className="border-b">
-                                      <td className="py-2 pr-4 font-medium text-gray-700 capitalize">
+                                    <tr
+                                      key={key}
+                                      className="border-b hover:bg-gray-50 transition-colors"
+                                    >
+                                      <td className="py-2 pr-4 font-bold capitalize">
                                         {key.replace(/([A-Z])/g, " $1")}
                                       </td>
                                       <td className="py-2">{value}</td>
@@ -391,10 +413,12 @@ export default function Product() {
                       </div>
                     </div>
 
+                    {/* DESCRIPTION + CTA */}
                     <div className="mt-4 md:mt-6">
                       <p className="text-gray-700 text-sm leading-relaxed">
                         {item?.description}
                       </p>
+
                       <button
                         onClick={() => openModal(item)}
                         className="mt-4 bg-[#f5c842] hover:bg-[#e5b832] text-black font-bold px-5 py-2 rounded-lg transition-colors w-full md:w-auto"
