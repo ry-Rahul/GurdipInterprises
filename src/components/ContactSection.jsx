@@ -193,7 +193,7 @@ export default function ContactSection() {
 
                     {/* Instagram */}
                     <Link
-                      to="https://www.instagram.com/gurdipinterprises/"
+                      to="https://www.instagram.com/gurdip.automation_eng?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                       target="_blank"
                       rel="noopener noreferrer"
                       className="
