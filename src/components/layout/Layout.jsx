@@ -94,7 +94,7 @@ const Layout = () => {
           id="whatsapp-popup"
           onClick={openWhatsApp}
           className={`
-            fixed bottom-8 right-[94px] z-40
+            fixed bottom-8 right-[94px] z-50
             bg-green-600 text-white shadow-xl rounded-lg 
             px-4 py-3 text-sm font-semibold cursor-pointer
             flex items-center gap-2

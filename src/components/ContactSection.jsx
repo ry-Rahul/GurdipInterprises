@@ -14,8 +14,9 @@ import {
   MessageOutlined,
   PhoneOutlined,
 } from "@ant-design/icons";
-import { Mail, MessageSquare, Phone } from "lucide-react";
+import { Facebook, Instagram, Mail, MessageSquare, Phone } from "lucide-react";
 
+import { FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import QuickContactModal from "../components/modal/QuickContactModal";
 import address from "../constants/address";
@@ -27,6 +28,7 @@ export default function ContactSection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedContactType, setSelectedContactType] =
     useState("General Inquiry");
+  const whatsappNumber = "919811547246";
 
   const openContactModal = (type) => {
     setSelectedContactType(type);
@@ -169,24 +171,62 @@ export default function ContactSection() {
                   size="middle"
                   className="justify-center sm:justify-end w-full"
                 >
-                  <a
-                    href="#"
-                    className="w-8 h-8 bg-[#3b5998] rounded flex items-center justify-center text-white text-sm font-bold hover:opacity-80 transition"
-                  >
-                    f
-                  </a>
-                  <a
-                    href="#"
-                    className="w-8 h-8 bg-[#1da1f2] rounded flex items-center justify-center text-white text-sm font-bold hover:opacity-80 transition"
-                  >
-                    t
-                  </a>
-                  <a
-                    href="#"
-                    className="w-8 h-8 bg-[#0077b5] rounded flex items-center justify-center text-white text-sm font-bold hover:opacity-80 transition"
-                  >
-                    in
-                  </a>
+                  <div className="flex items-center gap-3">
+                    {/* Facebook */}
+                    <Link
+                      to="https://www.facebook.com/share/16fYe7LGQH/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="
+                            w-10 h-10 
+                            rounded-full 
+                            bg-gradient-to-br from-[#1877F2] to-[#1459b3]
+                            flex items-center justify-center 
+                            text-white 
+                            shadow-lg 
+                            hover:shadow-[#1877F2]/50 hover:scale-110 
+                            transition-all duration-300
+                          "
+                    >
+                      <Facebook className="w-5 h-5" />
+                    </Link>
+
+                    {/* Instagram */}
+                    <Link
+                      to="https://www.instagram.com/gurdipinterprises/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="
+                          w-10 h-10 
+                          rounded-full 
+                          bg-gradient-to-br from-[#f58529] via-[#dd2a7b] to-[#8134af]
+                          flex items-center justify-center 
+                          text-white 
+                          shadow-lg 
+                          hover:shadow-[#dd2a7b]/50 hover:scale-110 
+                          transition-all duration-300
+                        "
+                    >
+                      <Instagram className="w-5 h-5" />
+                    </Link>
+                    <Link
+                      to={`https://wa.me/${whatsappNumber}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="
+                            w-10 h-10 
+                            rounded-full 
+                            bg-gradient-to-br from-[#25D366] to-[#128C7E]
+                            flex items-center justify-center 
+                            text-white 
+                            shadow-lg 
+                            hover:shadow-[#25D366]/50 hover:scale-110 
+                            transition-all duration-300
+                          "
+                    >
+                      <FaWhatsapp className="w-5 h-5" />
+                    </Link>
+                  </div>
                 </Space>
               </Col>
             </Row>
