@@ -6,21 +6,41 @@ import ProductModal from "../components/modal/ProductModal"; // <-- make sure th
 const products = [
   {
     id: 1,
-    name: "Siemens Programming Cable",
-    image: ["/siemens-programming-cable.jpg"],
+    name: "Siemens hmi kp 400",
+    image: ["./homeCarausel/Siemens-hmi kp400.jpeg"],
   },
-  { id: 2, name: "Siemens 6es7972", image: ["/siemens-6es7972.jpg"] },
-  { id: 3, name: "Bge Y20-A1-174-3", image: ["/industrial-connector.jpg"] },
-  { id: 4, name: "Siemens PLC S7 300", image: ["/siemens-plc-s7-300.jpg"] },
+  { id: 2, name: "S7 1200 plc", image: ["/homeCarausel/S7-1200-plc.jpeg"] },
+  { id: 3, name: "Hmi ktp 177a", image: ["/homeCarausel/Hmi-ktp-177.jpeg"] },
+  { id: 4, name: "Weight module", image: ["/homeCarausel/Weight-module.jpeg"] },
   {
     id: 5,
-    name: "Programming cable USB AC362",
-    image: ["/usb-programming-cable.jpg"],
+    name: "Beg rectifier",
+    image: ["/homeCarausel/Beg-rectifier.jpeg"],
   },
   {
     id: 6,
-    name: "Bge 1.5 Sew Eurodrive Rectifier",
-    image: ["/rectifier-module.jpg"],
+    name: "TSA ADPPTER",
+    image: ["/homeCarausel/TSA-ADPPTER.jpeg"],
+  },
+  {
+    id: 7,
+    name: "Wire rope cp 30",
+    image: ["/homeCarausel/Wire-ropecp.jpeg"],
+  },
+  {
+    id: 8,
+    name: "Hmi",
+    image: ["/homeCarausel/hmi-1.jpeg"],
+  },
+  {
+    id: 9,
+    name: "Hmi",
+    image: ["/homeCarausel/Hmi-2.jpeg"],
+  },
+  {
+    id: 10,
+    name: "Panal",
+    image: ["/homeCarausel/panal.jpeg"],
   },
 ];
 
